@@ -35,3 +35,5 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/add-agent-form', [ProfileController::class,'showAddAgentForm'])->name('add.agent.form');

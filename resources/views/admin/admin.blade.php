@@ -11,29 +11,10 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("You're logged in as administrator!") }}
                 </div>
-
                 <div>
-                    <form action="{{url('/addagent')}}" method="POST">
-                        @csrf
-                        <div>
-                            <label>Agent Name</label>
-                            <input type="text" name="name" required="">
-                        </div>
-                        <div>
-                            <label>Email</label>
-                            <input type="email" name="email" required="">
-                        </div>
-                        <div>
-                            <label>Password</label>
-                            <input type="password" name="password" required="">
-                        </div>
-                        <div>
-                            <input type="submit">
-                        </div>
-
-
-                    </form>
+                <a href="{{ route('add.agent.form') }}" class="button" style="background-color: #3498db; color: #fff;">Add an Agent</a>
                 </div>
+                
             </div>
         </div>
     </div>
