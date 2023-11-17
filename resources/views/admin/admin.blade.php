@@ -11,9 +11,32 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("You're logged in as administrator!") }}
                 </div>
+
+                <div>
+                    <form action="{{url('/addagent')}}" method="POST">
+                        @csrf
+                        <div>
+                            <label>Agent Name</label>
+                            <input type="text" name="name" required="">
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input type="email" name="email" required="">
+                        </div>
+                        <div>
+                            <label>Password</label>
+                            <input type="password" name="password" required="">
+                        </div>
+                        <div>
+                            <input type="submit">
+                        </div>
+
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </x-app-layout>
 
-<h1>Admin Dashboard</h1>
+#<h1>Admin Dashboard</h1>
