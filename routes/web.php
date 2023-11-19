@@ -26,7 +26,7 @@ Route::get('/redirects',[ProfileController::class,"index"]);
 
 Route::post('/addagent',[ProfileController::class,"addagent"]);
 
-Route::middleware(['auth', 'verified'])->get('/dashboard',[ProfileController::class,"index"])->name('dashboard');
+Route::middleware(['auth', 'verified'])->get('/redirects',[ProfileController::class,"index"])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
