@@ -5,7 +5,7 @@
             <div class="col-12">
                 <nav class="navbar navbar-expand-lg navbar-light rounded">
                     <a class="navbar-brand logo">
-                        <img src="{{asset('assets/front/img/real-estate-logohome.jpg')}}" alt="logo">
+                        <img src="{{asset('assets/front/img/download.png')}}" alt="logo">
                         <a style="font-family: 'Helvetica', sans-serif; font-size: 24px; font-weight: bold; color: #fff;">ABASHON</a>
                     </a>
                 </nav>

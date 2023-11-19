@@ -1077,6 +1077,12 @@ input[type=checkbox]:checked + label:before {
     padding: 0;
 }
 
+.navbar-brand {
+    display: inline-block;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
 .main-header .navbar-expand-lg .navbar-nav .nav-link {
     padding: 35px 17px 34px;
     font-size: 15px;
@@ -9592,7 +9598,7 @@ body.off-canvas-sidebar-open {
 
     .sticky-header {
         position: fixed;
-        top: 40px;
+        top: 0px;
         z-index: 999;
         background: transparent;
     }
