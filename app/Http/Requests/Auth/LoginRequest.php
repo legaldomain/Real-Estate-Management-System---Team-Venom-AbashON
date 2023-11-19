@@ -42,14 +42,14 @@ class LoginRequest extends FormRequest
     public function authenticate(): void
     {
         $this->ensureIsNotRateLimited();
-
+        // login request with specific things
         $user = User::where('email',$this->login)
                     ->orWhere('name',$this->login)
                     ->orWhere('phone',$this->login)
                     ->first();
 
 
-        if ( !$user || !Hash::check($this->password,$user->password)) {
+        if ( !$user || !Hash::check($this->password,$user->password)){
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
