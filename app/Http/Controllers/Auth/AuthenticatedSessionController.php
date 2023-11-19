@@ -28,7 +28,7 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
-
+        // redirect to specific dashboard, each dashboard is protected 
         $url = '';
         if ($request->user()->role === 'admin'){
 
