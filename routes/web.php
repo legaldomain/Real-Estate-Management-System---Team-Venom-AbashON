@@ -50,4 +50,8 @@ Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name
 
 
 
+Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
+
+
+
 
