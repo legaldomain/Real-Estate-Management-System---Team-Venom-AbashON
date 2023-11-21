@@ -41,6 +41,29 @@ class AdminController extends Controller
         return view('admin.admin_profile_view',compact('profileData'));
 
 
-    }
+    } //end method
+
+
+    public function AdminProfileStore( Request $request){
+
+        $id = Auth::user()->id;
+        $data = User::find($id);
+        $data->username = $request->username;
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->phone = $request->phone;
+        $data->address  = $request->address;
+        
+        $data->save();
+
+        $notification = array(
+
+            'message' => 'Admin Profile Updated Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+    }//end method
 
 }
