@@ -49,21 +49,30 @@ Route::middleware(['auth','role:admin'])->group(function(){
  Route::get('/admin/addagent',[AdminController::class,'AdminAddAgent'])->name('admin.addagent');
  Route::post('/admin/addagent/submit', [AdminController::class, 'addagent'])->name('admin.addagent.submit');
 
-}); //end grp adming middleware
+}); //end grp admin middleware
 
 
 //agent  group middleware start (protected)
 
 Route::middleware(['auth','role:agent'])->group(function(){
 
-Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
+ Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
+ 
+ Route::get('/agent/logout', [AgentController::class, 'AgentLogout'])->name('agent.logout');
 
-}); //end agent adming middleware
+ Route::get('/agent/profile', [AgentController::class, 'AgentProfile'])->name('agent.profile');
+
+
+ Route::post('/agent/profile/store', [AgentController::class, 'AgentProfileStore'])->name('agent.profile.store');
+
+}); //end agent middleware
 
 
 
 Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
+Route::get('/agent/login', [AgentController::class, 'AgentLogin'])->name('agent.login');
 
 Route::get('/', [AdminController::class, 'AdminGoBack'])->name('home');
+Route::get('/', [AgentController::class, 'AgentGoBack'])->name('home');
 
 
