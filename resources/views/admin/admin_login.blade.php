@@ -87,6 +87,7 @@
                         </button>
                       </div>
                       <a href="register.html" class="d-block mt-3 text-muted">Not a user? Sign up</a>
+                      <a href="{{ route('home') }}" class="d-block mt-3 text-muted">Rerurn to Home Page</a>
                     </form>
 
 

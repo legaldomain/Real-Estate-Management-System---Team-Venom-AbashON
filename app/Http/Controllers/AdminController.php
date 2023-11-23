@@ -27,6 +27,13 @@ class AdminController extends Controller
         return redirect('/admin/login');
     }//end method
 
+    public function AdminGoBack() {
+
+
+        return view('frontsite');
+
+    } //end method
+
     public function AdminLogin() {
 
 
