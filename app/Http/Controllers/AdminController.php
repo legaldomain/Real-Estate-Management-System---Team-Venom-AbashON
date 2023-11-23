@@ -73,4 +73,25 @@ class AdminController extends Controller
 
     }//end method
 
+    public function AdminAddAgent() {
+
+        return view('admin.admin_add_agent');
+
+
+    } //end method
+
+    public function addagent(Request $request)
+    {
+        $data= new user;
+        $data->name= $request->name;
+        $data->email= $request->email;
+        $data->password= bcrypt($request->password);
+        $data->role='agent';
+
+        $data->save();
+
+        return redirect()->back();
+    }
+
+
 }

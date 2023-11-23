@@ -17,6 +17,10 @@
               <i class="link-icon" data-feather="box"></i>
               <span class="link-title">Dashboard</span>
             </a>
+            <a href="{{route('admin.addagent') }}" class="nav-link">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">Add Agent</span>
+            </a>
           </li>
           <li class="nav-item nav-category">web apps</li>
           <li class="nav-item">
