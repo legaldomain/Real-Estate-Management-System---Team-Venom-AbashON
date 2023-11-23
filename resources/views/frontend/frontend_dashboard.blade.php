@@ -5,27 +5,27 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>Realshed - HTML 5 Template Preview</title>
+<title>ABASHON </title>
 
 <!-- Fav Icon -->
-<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="{{ asset('frontend/assets/images/favicon.ico') }}" type="image/x-icon">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 <!-- Stylesheets -->
-<link href="{{asset('frontend/assets/css/font-awesome-all.css') }}" rel="stylesheet">
-<link href="{{asset('frontend/assets/css/flaticon.css') }}" rel="stylesheet">
-<link href="{{asset('frontend/assets/css/owl.css') }}" rel="stylesheet">
-<link href="{{asset('frontend/assets/css/bootstrap.css') }}" rel="stylesheet">
-<link href="{{asset('frontend/assets/css/jquery.fancybox.min.css') }}" rel="stylesheet">
-<link href="{{asset('frontend/assets/css/animate.css') }}" rel="stylesheet">
-<link href="{{asset('frontend/assets/css/jquery-ui.css') }}" rel="stylesheet">
-<link href="{{asset('frontend/assets/css/nice-select.css') }}" rel="stylesheet">
-<link href="{{asset('frontend/assets/css/color/theme-color.css') }}" id="jssDefault" rel="stylesheet">
-<link href="{{asset('frontend/assets/css/switcher-style.css') }}" rel="stylesheet">
-<link href="{{asset('frontend/assets/css/style.css') }}" rel="stylesheet">
-<link href="{{asset('frontend/assets/css/responsive.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/font-awesome-all.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/flaticon.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/owl.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/bootstrap.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/jquery.fancybox.min.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/animate.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/jquery-ui.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/nice-select.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/color/theme-color.css') }}" id="jssDefault" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/switcher-style.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/style.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/responsive.css') }}" rel="stylesheet">
 
 </head>
 
@@ -44,30 +44,28 @@
                     <div class="animation-preloader">
                         <div class="spinner"></div>
                         <div class="txt-loading">
-                            <span data-text-preloader="E" class="letters-loading">
-                               E
+                            <span data-text-preloader="N" class="letters-loading">
+                               A
                             </span>
-                            <span data-text-preloader="A" class="letters-loading">
+                            <span data-text-preloader="O" class="letters-loading">
+                                B
+                            </span>
+                            <span data-text-preloader="H" class="letters-loading">
                                 A
                             </span>
                             <span data-text-preloader="S" class="letters-loading">
                                 S
                             </span>
-                            <span data-text-preloader="Y" class="letters-loading">
-                                Y
+                            <span data-text-preloader="A" class="letters-loading">
+                               H
                             </span>
-                            <span data-text-preloader="L" class="letters-loading">
-                               L
+                            <span data-text-preloader="B" class="letters-loading">
+                                O
                             </span>
                             <span data-text-preloader="A" class="letters-loading">
-                                A
-                            </span>
-                            <span data-text-preloader="N" class="letters-loading">
                                 N
                             </span>
-                            <span data-text-preloader="D" class="letters-loading">
-                                D
-                            </span>
+                            
                         </div>
                     </div>  
                 </div>
@@ -112,7 +110,7 @@
 <div class="outer-box">
 <div class="main-box">
 <div class="logo-box">
-    <figure class="logo"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></figure>
+    <figure class="logo"><a href="index.html"><img src="{{ asset('frontend/assets/images/logo.png') }}" alt=""></a></figure>
 </div>
 <div class="menu-area clearfix">
     <!--Mobile Navigation Toggler-->
@@ -240,7 +238,7 @@
                 <div class="outer-box">
                     <div class="main-box">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                            <figure class="logo"><a href="index.html"><img src="{{ asset('frontend/assets/images/logo.png') }}" alt=""></a></figure>
                         </div>
                         <div class="menu-area clearfix">
                             <nav class="main-menu clearfix">
@@ -262,7 +260,7 @@
             <div class="close-btn"><i class="fas fa-times"></i></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-2.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="index.html"><img src="{{ asset('frontend/assets/images/logo-2.png') }}" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
                     <h4>Contact Info</h4>
@@ -286,7 +284,7 @@
 
 
         <!-- banner-section -->
-        <section class="banner-section" style="background-image: url(assets/images/banner/banner-1.jpg);">
+        <section class="banner-section" style="background-image: url({{ asset('frontend/assets/images/banner/banner-1.jpg') }});">
             <div class="auto-container">
                 <div class="inner-container">
                     <div class="content-box centred">
@@ -301,406 +299,406 @@
                                     <li class="tab-btn" data-tab="#tab-2">RENT</li>
                                 </ul>
                             </div>
-                            <div class="tabs-content info-group">
-                                <div class="tab active-tab" id="tab-1">
-                                    <div class="inner-box">
-                                        <div class="top-search">
-                                            <form action="index.html" method="post" class="search-form">
-                                                <div class="row clearfix">
-                                                    <div class="col-lg-4 col-md-12 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Search Property</label>
-                                                            <div class="field-input">
-                                                                <i class="fas fa-search"></i>
-                                                                <input type="search" name="search-field" placeholder="Search by Property, Location or Landmark..." required="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Location</label>
-                                                            <div class="select-box">
-                                                                <i class="far fa-compass"></i>
-                                                                <select class="wide">
-                                                                   <option data-display="Input location">Input location</option>
-                                                                   <option value="1">New York</option>
-                                                                   <option value="2">California</option>
-                                                                   <option value="3">London</option>
-                                                                   <option value="4">Maxico</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Property Type</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="All Type">All Type</option>
-                                                                   <option value="1">Laxury</option>
-                                                                   <option value="2">Classic</option>
-                                                                   <option value="3">Modern</option>
-                                                                   <option value="4">New</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="search-btn">
-                                                    <button type="submit"><i class="fas fa-search"></i>Search</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="switch_btn_one ">
-                                            <button class="nav-btn nav-toggler navSidebar-button clearfix search__toggler">Advanced Search<i class="fas fa-angle-down"></i></button>
-                                            <div class="advanced-search">
-                                                <div class="close-btn">
-                                                    <a href="#" class="close-side-widget"><i class="far fa-times"></i></a>
-                                                </div>
-                                                <div class="row clearfix">
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Distance from Location</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="Distance from Location">Distance from Location</option>
-                                                                   <option value="1">Max Bath</option>
-                                                                   <option value="2">Within 1 Mile</option>
-                                                                   <option value="3">Within 2 Mile</option>
-                                                                   <option value="4">Within 3 Mile</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Bedrooms</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="Max Rooms">Max Rooms</option>
-                                                                   <option value="1">One Rooms</option>
-                                                                   <option value="2">Two Rooms</option>
-                                                                   <option value="3">Three Rooms</option>
-                                                                   <option value="4">Four Rooms</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Sort by</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="Most Popular">Most Popular</option>
-                                                                   <option value="1">Top Rating</option>
-                                                                   <option value="2">New Rooms</option>
-                                                                   <option value="3">Classic Rooms</option>
-                                                                   <option value="4">Luxry Rooms</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Floor</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="Select Floor">Select Floor</option>
-                                                                   <option value="1">One Floor</option>
-                                                                   <option value="2">Two Floor</option>
-                                                                   <option value="3">Three Floor</option>
-                                                                   <option value="4">Four Floor</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Bath</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="Max Bath">Max Bath</option>
-                                                                   <option value="1">Max Bath</option>
-                                                                   <option value="2">Max Bath</option>
-                                                                   <option value="3">Max Bath</option>
-                                                                   <option value="4">Max Bath</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Agencies</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="Any Agency">Any Agency</option>
-                                                                   <option value="1">Any Agency</option>
-                                                                   <option value="2">Agency 01</option>
-                                                                   <option value="3">Agency 02</option>
-                                                                   <option value="4">Agency 03</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="range-box">
-                                                    <div class="row clearfix">
-                                                        <div class="col-lg-6 col-md-6 col-sm-12 column">
-                                                            <div class="price-range">
-                                                                <h6>Select Price Range</h6>
-                                                                <div class="range-input">
-                                                                    <div class="input"><input type="text" class="property-amount" name="field-name" readonly=""></div>
-                                                                </div>
-                                                                <div class="price-range-slider"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6 col-sm-12 column">
-                                                            <div class="area-range">
-                                                                <h6>Select Area</h6>
-                                                                <div class="range-input">
-                                                                    <div class="input"><input type="text" class="area-range" name="field-name" readonly=""></div>
-                                                                </div>
-                                                                <div class="area-range-slider"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab" id="tab-2">
-                                    <div class="inner-box">
-                                        <div class="top-search">
-                                            <form action="index.html" method="post" class="search-form">
-                                                <div class="row clearfix">
-                                                    <div class="col-lg-4 col-md-12 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Search Property</label>
-                                                            <div class="field-input">
-                                                                <i class="fas fa-search"></i>
-                                                                <input type="search" name="search-field" placeholder="Search by Property, Location or Landmark..." required="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Location</label>
-                                                            <div class="select-box">
-                                                                <i class="far fa-compass"></i>
-                                                                <select class="wide">
-                                                                   <option data-display="Input location">Input location</option>
-                                                                   <option value="1">New York</option>
-                                                                   <option value="2">California</option>
-                                                                   <option value="3">London</option>
-                                                                   <option value="4">Maxico</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Property Type</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="All Type">All Type</option>
-                                                                   <option value="1">Laxury</option>
-                                                                   <option value="2">Classic</option>
-                                                                   <option value="3">Modern</option>
-                                                                   <option value="4">New</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="search-btn">
-                                                    <button type="submit"><i class="fas fa-search"></i>Search</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="switch_btn_one ">
-                                            <button class="nav-btn nav-toggler navSidebar-button clearfix search__toggler">Advanced Search<i class="fas fa-angle-down"></i></button>
-                                            <div class="advanced-search">
-                                                <div class="close-btn">
-                                                    <a href="#" class="close-side-widget"><i class="far fa-times"></i></a>
-                                                </div>
-                                                <div class="row clearfix">
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Distance from Location</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="Distance from Location">Distance from Location</option>
-                                                                   <option value="1">Max Bath</option>
-                                                                   <option value="2">Within 1 Mile</option>
-                                                                   <option value="3">Within 2 Mile</option>
-                                                                   <option value="4">Within 3 Mile</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Bedrooms</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="Max Rooms">Max Rooms</option>
-                                                                   <option value="1">One Rooms</option>
-                                                                   <option value="2">Two Rooms</option>
-                                                                   <option value="3">Three Rooms</option>
-                                                                   <option value="4">Four Rooms</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Sort by</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="Most Popular">Most Popular</option>
-                                                                   <option value="1">Top Rating</option>
-                                                                   <option value="2">New Rooms</option>
-                                                                   <option value="3">Classic Rooms</option>
-                                                                   <option value="4">Luxry Rooms</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Floor</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="Select Floor">Select Floor</option>
-                                                                   <option value="1">One Floor</option>
-                                                                   <option value="2">Two Floor</option>
-                                                                   <option value="3">Three Floor</option>
-                                                                   <option value="4">Four Floor</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Bath</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="Max Bath">Max Bath</option>
-                                                                   <option value="1">Max Bath</option>
-                                                                   <option value="2">Max Bath</option>
-                                                                   <option value="3">Max Bath</option>
-                                                                   <option value="4">Max Bath</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                                        <div class="form-group">
-                                                            <label>Agencies</label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                   <option data-display="Any Agency">Any Agency</option>
-                                                                   <option value="1">Any Agency</option>
-                                                                   <option value="2">Agency 01</option>
-                                                                   <option value="3">Agency 02</option>
-                                                                   <option value="4">Agency 03</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="range-box">
-                                                    <div class="row clearfix">
-                                                        <div class="col-lg-6 col-md-6 col-sm-12 column">
-                                                            <div class="price-range">
-                                                                <h6>Select Price Range</h6>
-                                                                <div class="range-input">
-                                                                    <div class="input"><input type="text" class="property-amount" name="field-name" readonly=""></div>
-                                                                </div>
-                                                                <div class="price-range-slider"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6 col-sm-12 column">
-                                                            <div class="area-range">
-                                                                <h6>Select Area</h6>
-                                                                <div class="range-input">
-                                                                    <div class="input"><input type="text" class="area-range" name="field-name" readonly=""></div>
-                                                                </div>
-                                                                <div class="area-range-slider"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<div class="tabs-content info-group">
+<div class="tab active-tab" id="tab-1">
+<div class="inner-box">
+<div class="top-search">
+<form action="index.html" method="post" class="search-form">
+    <div class="row clearfix">
+        <div class="col-lg-4 col-md-12 col-sm-12 column">
+            <div class="form-group">
+                <label>Search Property</label>
+                <div class="field-input">
+                    <i class="fas fa-search"></i>
+                    <input type="search" name="search-field" placeholder="Search by Property, Location or Landmark..." required="">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Location</label>
+                <div class="select-box">
+                    <i class="far fa-compass"></i>
+                    <select class="wide">
+                       <option data-display="Input location">Input location</option>
+                       <option value="1">New York</option>
+                       <option value="2">California</option>
+                       <option value="3">London</option>
+                       <option value="4">Maxico</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Property Type</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="All Type">All Type</option>
+                       <option value="1">Laxury</option>
+                       <option value="2">Classic</option>
+                       <option value="3">Modern</option>
+                       <option value="4">New</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-btn">
+        <button type="submit"><i class="fas fa-search"></i>Search</button>
+    </div>
+</form>
+</div>
+<div class="switch_btn_one ">
+<button class="nav-btn nav-toggler navSidebar-button clearfix search__toggler">Advanced Search<i class="fas fa-angle-down"></i></button>
+<div class="advanced-search">
+    <div class="close-btn">
+        <a href="#" class="close-side-widget"><i class="far fa-times"></i></a>
+    </div>
+    <div class="row clearfix">
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Distance from Location</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="Distance from Location">Distance from Location</option>
+                       <option value="1">Max Bath</option>
+                       <option value="2">Within 1 Mile</option>
+                       <option value="3">Within 2 Mile</option>
+                       <option value="4">Within 3 Mile</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Bedrooms</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="Max Rooms">Max Rooms</option>
+                       <option value="1">One Rooms</option>
+                       <option value="2">Two Rooms</option>
+                       <option value="3">Three Rooms</option>
+                       <option value="4">Four Rooms</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Sort by</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="Most Popular">Most Popular</option>
+                       <option value="1">Top Rating</option>
+                       <option value="2">New Rooms</option>
+                       <option value="3">Classic Rooms</option>
+                       <option value="4">Luxry Rooms</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Floor</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="Select Floor">Select Floor</option>
+                       <option value="1">One Floor</option>
+                       <option value="2">Two Floor</option>
+                       <option value="3">Three Floor</option>
+                       <option value="4">Four Floor</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Bath</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="Max Bath">Max Bath</option>
+                       <option value="1">Max Bath</option>
+                       <option value="2">Max Bath</option>
+                       <option value="3">Max Bath</option>
+                       <option value="4">Max Bath</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Agencies</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="Any Agency">Any Agency</option>
+                       <option value="1">Any Agency</option>
+                       <option value="2">Agency 01</option>
+                       <option value="3">Agency 02</option>
+                       <option value="4">Agency 03</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="range-box">
+        <div class="row clearfix">
+            <div class="col-lg-6 col-md-6 col-sm-12 column">
+                <div class="price-range">
+                    <h6>Select Price Range</h6>
+                    <div class="range-input">
+                        <div class="input"><input type="text" class="property-amount" name="field-name" readonly=""></div>
                     </div>
+                    <div class="price-range-slider"></div>
                 </div>
             </div>
-        </section>
-        <!-- banner-section end -->
-
-
-        <!-- category-section -->
-        <section class="category-section centred">
-            <div class="auto-container">
-                <div class="inner-container wow slideInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                    <ul class="category-list clearfix">
-                        <li>
-                            <div class="category-block-one">
-                                <div class="inner-box">
-                                    <div class="icon-box"><i class="icon-1"></i></div>
-                                    <h5><a href="property-details.html">Residential</a></h5>
-                                    <span>52</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="category-block-one">
-                                <div class="inner-box">
-                                    <div class="icon-box"><i class="icon-2"></i></div>
-                                    <h5><a href="property-details.html">Commercial</a></h5>
-                                    <span>20</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="category-block-one">
-                                <div class="inner-box">
-                                    <div class="icon-box"><i class="icon-3"></i></div>
-                                    <h5><a href="property-details.html">Appertment</a></h5>
-                                    <span>35</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="category-block-one">
-                                <div class="inner-box">
-                                    <div class="icon-box"><i class="icon-4"></i></div>
-                                    <h5><a href="property-details.html">Industrial</a></h5>
-                                    <span>10</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="category-block-one">
-                                <div class="inner-box">
-                                    <div class="icon-box"><i class="icon-5"></i></div>
-                                    <h5><a href="property-details.html">Building Code</a></h5>
-                                    <span>27</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="more-btn"><a href="categories.html" class="theme-btn btn-one">All Categories</a></div>
+            <div class="col-lg-6 col-md-6 col-sm-12 column">
+                <div class="area-range">
+                    <h6>Select Area</h6>
+                    <div class="range-input">
+                        <div class="input"><input type="text" class="area-range" name="field-name" readonly=""></div>
+                    </div>
+                    <div class="area-range-slider"></div>
                 </div>
             </div>
-        </section>
-        <!-- category-section end -->
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab" id="tab-2">
+<div class="inner-box">
+<div class="top-search">
+<form action="index.html" method="post" class="search-form">
+    <div class="row clearfix">
+        <div class="col-lg-4 col-md-12 col-sm-12 column">
+            <div class="form-group">
+                <label>Search Property</label>
+                <div class="field-input">
+                    <i class="fas fa-search"></i>
+                    <input type="search" name="search-field" placeholder="Search by Property, Location or Landmark..." required="">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Location</label>
+                <div class="select-box">
+                    <i class="far fa-compass"></i>
+                    <select class="wide">
+                       <option data-display="Input location">Input location</option>
+                       <option value="1">New York</option>
+                       <option value="2">California</option>
+                       <option value="3">London</option>
+                       <option value="4">Maxico</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Property Type</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="All Type">All Type</option>
+                       <option value="1">Laxury</option>
+                       <option value="2">Classic</option>
+                       <option value="3">Modern</option>
+                       <option value="4">New</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-btn">
+        <button type="submit"><i class="fas fa-search"></i>Search</button>
+    </div>
+</form>
+</div>
+<div class="switch_btn_one ">
+<button class="nav-btn nav-toggler navSidebar-button clearfix search__toggler">Advanced Search<i class="fas fa-angle-down"></i></button>
+<div class="advanced-search">
+    <div class="close-btn">
+        <a href="#" class="close-side-widget"><i class="far fa-times"></i></a>
+    </div>
+    <div class="row clearfix">
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Distance from Location</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="Distance from Location">Distance from Location</option>
+                       <option value="1">Max Bath</option>
+                       <option value="2">Within 1 Mile</option>
+                       <option value="3">Within 2 Mile</option>
+                       <option value="4">Within 3 Mile</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Bedrooms</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="Max Rooms">Max Rooms</option>
+                       <option value="1">One Rooms</option>
+                       <option value="2">Two Rooms</option>
+                       <option value="3">Three Rooms</option>
+                       <option value="4">Four Rooms</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Sort by</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="Most Popular">Most Popular</option>
+                       <option value="1">Top Rating</option>
+                       <option value="2">New Rooms</option>
+                       <option value="3">Classic Rooms</option>
+                       <option value="4">Luxry Rooms</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Floor</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="Select Floor">Select Floor</option>
+                       <option value="1">One Floor</option>
+                       <option value="2">Two Floor</option>
+                       <option value="3">Three Floor</option>
+                       <option value="4">Four Floor</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Bath</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="Max Bath">Max Bath</option>
+                       <option value="1">Max Bath</option>
+                       <option value="2">Max Bath</option>
+                       <option value="3">Max Bath</option>
+                       <option value="4">Max Bath</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 column">
+            <div class="form-group">
+                <label>Agencies</label>
+                <div class="select-box">
+                    <select class="wide">
+                       <option data-display="Any Agency">Any Agency</option>
+                       <option value="1">Any Agency</option>
+                       <option value="2">Agency 01</option>
+                       <option value="3">Agency 02</option>
+                       <option value="4">Agency 03</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="range-box">
+        <div class="row clearfix">
+            <div class="col-lg-6 col-md-6 col-sm-12 column">
+                <div class="price-range">
+                    <h6>Select Price Range</h6>
+                    <div class="range-input">
+                        <div class="input"><input type="text" class="property-amount" name="field-name" readonly=""></div>
+                    </div>
+                    <div class="price-range-slider"></div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 column">
+                <div class="area-range">
+                    <h6>Select Area</h6>
+                    <div class="range-input">
+                        <div class="input"><input type="text" class="area-range" name="field-name" readonly=""></div>
+                    </div>
+                    <div class="area-range-slider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- banner-section end -->
+
+
+<!-- category-section -->
+<section class="category-section centred">
+<div class="auto-container">
+<div class="inner-container wow slideInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+<ul class="category-list clearfix">
+<li>
+<div class="category-block-one">
+<div class="inner-box">
+<div class="icon-box"><i class="icon-1"></i></div>
+<h5><a href="property-details.html">Residential</a></h5>
+<span>52</span>
+</div>
+</div>
+</li>
+<li>
+<div class="category-block-one">
+<div class="inner-box">
+<div class="icon-box"><i class="icon-2"></i></div>
+<h5><a href="property-details.html">Commercial</a></h5>
+<span>20</span>
+</div>
+</div>
+</li>
+<li>
+<div class="category-block-one">
+<div class="inner-box">
+<div class="icon-box"><i class="icon-3"></i></div>
+<h5><a href="property-details.html">Appertment</a></h5>
+<span>35</span>
+</div>
+</div>
+</li>
+<li>
+<div class="category-block-one">
+<div class="inner-box">
+<div class="icon-box"><i class="icon-4"></i></div>
+<h5><a href="property-details.html">Industrial</a></h5>
+<span>10</span>
+</div>
+</div>
+</li>
+<li>
+<div class="category-block-one">
+<div class="inner-box">
+<div class="icon-box"><i class="icon-5"></i></div>
+<h5><a href="property-details.html">Building Code</a></h5>
+<span>27</span>
+</div>
+</div>
+</li>
+</ul>
+<div class="more-btn"><a href="categories.html" class="theme-btn btn-one">All Categories</a></div>
+</div>
+</div>
+</section>
+<!-- category-section end -->
 
 
         <!-- feature-section -->
@@ -718,14 +716,14 @@
                         <div class="feature-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/feature/feature-1.jpg" alt=""></figure>
+                                    <figure class="image"><img src="{{ asset('frontend/assets/images/feature/feature-1.jpg') }}" alt=""></figure>
                                     <div class="batch"><i class="icon-11"></i></div>
                                     <span class="category">Featured</span>
                                 </div>
                                 <div class="lower-content">
                                     <div class="author-info clearfix">
                                         <div class="author pull-left">
-                                            <figure class="author-thumb"><img src="assets/images/feature/author-1.jpg" alt=""></figure>
+                                            <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/feature/author-1.jpg') }}" alt=""></figure>
                                             <h6>Michael Bean</h6>
                                         </div>
                                         <div class="buy-btn pull-right"><a href="property-details.html">For Buy</a></div>
@@ -758,14 +756,14 @@
                         <div class="feature-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/feature/feature-2.jpg" alt=""></figure>
+                                    <figure class="image"><img src="{{ asset('frontend/assets/images/feature/feature-2.jpg') }}" alt=""></figure>
                                     <div class="batch"><i class="icon-11"></i></div>
                                     <span class="category">Featured</span>
                                 </div>
                                 <div class="lower-content">
                                     <div class="author-info clearfix">
                                         <div class="author pull-left">
-                                            <figure class="author-thumb"><img src="assets/images/feature/author-2.jpg" alt=""></figure>
+                                            <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/feature/author-2.jpg') }}" alt=""></figure>
                                             <h6>Robert Niro</h6>
                                         </div>
                                         <div class="buy-btn pull-right"><a href="property-details.html">For Rent</a></div>
@@ -796,14 +794,14 @@
                         <div class="feature-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/feature/feature-3.jpg" alt=""></figure>
+                                    <figure class="image"><img src="{{ asset('frontend/assets/images/feature/feature-3.jpg') }}" alt=""></figure>
                                     <div class="batch"><i class="icon-11"></i></div>
                                     <span class="category">Featured</span>
                                 </div>
                                 <div class="lower-content">
                                     <div class="author-info clearfix">
                                         <div class="author pull-left">
-                                            <figure class="author-thumb"><img src="assets/images/feature/author-3.jpg" alt=""></figure>
+                                            <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/feature/author-3.jpg') }}" alt=""></figure>
                                             <h6>Keira Mel</h6>
                                         </div>
                                         <div class="buy-btn pull-right"><a href="property-details.html">Sold Out</a></div>
@@ -838,7 +836,7 @@
 
 
         <!-- video-section -->
-        <section class="video-section centred" style="background-image: url(assets/images/background/video-1.jpg);">
+        <section class="video-section centred" style="background-image: url({{ asset('frontend/assets/images/background/video-1.jpg') }});">
             <div class="auto-container">
                 <div class="video-inner">
                     <div class="video-btn">
@@ -864,14 +862,14 @@
                         <div class="feature-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/feature/feature-1.jpg" alt=""></figure>
+                                    <figure class="image"><img src="{{ asset('frontend/assets/images/feature/feature-1.jpg') }}" alt=""></figure>
                                     <div class="batch"><i class="icon-11"></i></div>
                                     <span class="category">Featured</span>
                                 </div>
                                 <div class="lower-content">
                                     <div class="author-info clearfix">
                                         <div class="author pull-left">
-                                            <figure class="author-thumb"><img src="assets/images/feature/author-1.jpg" alt=""></figure>
+                                            <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/feature/author-1.jpg') }}" alt=""></figure>
                                             <h6>Michael Bean</h6>
                                         </div>
                                         <div class="buy-btn pull-right"><a href="property-details.html">For Buy</a></div>
@@ -906,14 +904,14 @@
                         <div class="feature-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/feature/feature-1.jpg" alt=""></figure>
+                                    <figure class="image"><img src="{{ asset('frontend/assets/images/feature/feature-1.jpg') }}" alt=""></figure>
                                     <div class="batch"><i class="icon-11"></i></div>
                                     <span class="category">Featured</span>
                                 </div>
                                 <div class="lower-content">
                                     <div class="author-info clearfix">
                                         <div class="author pull-left">
-                                            <figure class="author-thumb"><img src="assets/images/feature/author-1.jpg" alt=""></figure>
+                                            <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/feature/author-1.jpg') }}" alt=""></figure>
                                             <h6>Michael Bean</h6>
                                         </div>
                                         <div class="buy-btn pull-right"><a href="property-details.html">For Buy</a></div>
@@ -946,14 +944,14 @@
                         <div class="feature-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/feature/feature-1.jpg" alt=""></figure>
+                                    <figure class="image"><img src="{{ asset('frontend/assets/images/feature/feature-1.jpg') }}" alt=""></figure>
                                     <div class="batch"><i class="icon-11"></i></div>
                                     <span class="category">Featured</span>
                                 </div>
                                 <div class="lower-content">
                                     <div class="author-info clearfix">
                                         <div class="author pull-left">
-                                            <figure class="author-thumb"><img src="assets/images/feature/author-1.jpg" alt=""></figure>
+                                            <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/feature/author-1.jpg') }}" alt=""></figure>
                                             <h6>Michael Bean</h6>
                                         </div>
                                         <div class="buy-btn pull-right"><a href="property-details.html">For Buy</a></div>
@@ -994,7 +992,7 @@
 
         <!-- testimonial-section end -->
         <section class="testimonial-section bg-color-1 centred">
-            <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-1.png);"></div>
+            <div class="pattern-layer" style="background-image: url({{ asset('frontend/assets/images/shape/shape-1.png') }});"></div>
             <div class="auto-container">
                 <div class="sec-title">
                     <h5>Testimonials</h5>
@@ -1003,7 +1001,7 @@
                 <div class="single-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
                     <div class="testimonial-block-one">
                         <div class="inner-box">
-                            <figure class="thumb-box"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure>
+                            <figure class="thumb-box"><img src="{{ asset('frontend/assets/images/resource/testimonial-1.jpg') }}" alt=""></figure>
                             <div class="text">
                                 <p>Our goal each day is to ensure that our residents’ needs are not only met but exceeded. To make that happen we are committed to provid ing an environment in which residents can enjoy.</p>
                             </div>
@@ -1015,7 +1013,7 @@
                     </div>
                     <div class="testimonial-block-one">
                         <div class="inner-box">
-                            <figure class="thumb-box"><img src="assets/images/resource/testimonial-2.jpg" alt=""></figure>
+                            <figure class="thumb-box"><img src="{{ asset('frontend/assets/images/resource/testimonial-2.jpg') }}" alt=""></figure>
                             <div class="text">
                                 <p>Our goal each day is to ensure that our residents’ needs are not only met but exceeded. To make that happen we are committed to provid ing an environment in which residents can enjoy.</p>
                             </div>
@@ -1027,7 +1025,7 @@
                     </div>
                     <div class="testimonial-block-one">
                         <div class="inner-box">
-                            <figure class="thumb-box"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure>
+                            <figure class="thumb-box"><img src="{{ asset('frontend/assets/images/resource/testimonial-1.jpg') }}" alt=""></figure>
                             <div class="text">
                                 <p>Our goal each day is to ensure that our residents’ needs are not only met but exceeded. To make that happen we are committed to provid ing an environment in which residents can enjoy.</p>
                             </div>
@@ -1106,7 +1104,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all illustration brand marketing software">
                             <div class="place-block-one">
                                 <div class="inner-box">
-                                    <figure class="image-box"><img src="assets/images/resource/place-1.jpg" alt=""></figure>
+                                    <figure class="image-box"><img src="{{ asset('frontend/assets/images/resource/place-1.jpg') }}" alt=""></figure>
                                     <div class="text">
                                         <h4><a href="categories.html">Los Angeles</a></h4>
                                         <p>10 Properties</p>
@@ -1117,7 +1115,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all brand illustration print software logo">
                             <div class="place-block-one">
                                 <div class="inner-box">
-                                    <figure class="image-box"><img src="assets/images/resource/place-2.jpg" alt=""></figure>
+                                    <figure class="image-box"><img src="{{ asset('frontend/assets/images/resource/place-2.jpg') }}" alt=""></figure>
                                     <div class="text">
                                         <h4><a href="categories.html">San Francisco</a></h4>
                                         <p>08 Properties</p>
@@ -1128,7 +1126,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all illustration marketing logo">
                             <div class="place-block-one">
                                 <div class="inner-box">
-                                    <figure class="image-box"><img src="assets/images/resource/place-3.jpg" alt=""></figure>
+                                    <figure class="image-box"><img src="{{ asset('frontend/assets/images/resource/place-3.jpg') }}" alt=""></figure>
                                     <div class="text">
                                         <h4><a href="categories.html">Las Vegas</a></h4>
                                         <p>29 Properties</p>
@@ -1139,7 +1137,7 @@
                         <div class="col-lg-8 col-md-6 col-sm-12 masonry-item small-column all brand marketing print software">
                             <div class="place-block-one">
                                 <div class="inner-box">
-                                    <figure class="image-box"><img src="assets/images/resource/place-4.jpg" alt=""></figure>
+                                    <figure class="image-box"><img src="{{ asset('frontend/assets/images/resource/place-4.jpg') }}" alt=""></figure>
                                     <div class="text">
                                         <h4><a href="categories.html">New York City</a></h4>
                                         <p>05 Properties</p>
@@ -1156,7 +1154,7 @@
 
         <!-- team-section -->
         <section class="team-section sec-pad centred bg-color-1">
-            <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-1.png);"></div>
+            <div class="pattern-layer" style="background-image: url({{ asset('frontend/assets/images/shape/shape-1.png') }});"></div>
             <div class="auto-container">
                 <div class="sec-title">
                     <h5>Our Agents</h5>
@@ -1165,7 +1163,7 @@
                 <div class="single-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
                     <div class="team-block-one">
                         <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/team/team-1.jpg" alt=""></figure>
+                            <figure class="image-box"><img src="{{ asset('frontend/assets/images/team/team-1.jpg') }}" alt=""></figure>
                             <div class="lower-content">
                                 <div class="inner">
                                     <h4><a href="agents-details.html">Merrie Lewis</a></h4>
@@ -1181,7 +1179,7 @@
                     </div>
                     <div class="team-block-one">
                         <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/team/team-2.jpg" alt=""></figure>
+                            <figure class="image-box"><img src="{{ asset('frontend/assets/images/team/team-2.jpg') }}" alt=""></figure>
                             <div class="lower-content">
                                 <div class="inner">
                                     <h4><a href="agents-details.html">Parks Missie</a></h4>
@@ -1197,7 +1195,7 @@
                     </div>
                     <div class="team-block-one">
                         <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/team/team-3.jpg" alt=""></figure>
+                            <figure class="image-box"><img src="{{ asset('frontend/assets/images/team/team-3.jpg') }}" alt=""></figure>
                             <div class="lower-content">
                                 <div class="inner">
                                     <h4><a href="agents-details.html">Mariana Buenos</a></h4>
@@ -1213,7 +1211,7 @@
                     </div>
                     <div class="team-block-one">
                         <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/team/team-4.jpg" alt=""></figure>
+                            <figure class="image-box"><img src="{{ asset('frontend/assets/images/team/team-4.jpg') }}" alt=""></figure>
                             <div class="lower-content">
                                 <div class="inner">
                                     <h4><a href="agents-details.html">Stephen Fowler</a></h4>
@@ -1229,7 +1227,7 @@
                     </div>
                     <div class="team-block-one">
                         <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/team/team-5.jpg" alt=""></figure>
+                            <figure class="image-box"><img src="{{ asset('frontend/assets/images/team/team-5.jpg') }}" alt=""></figure>
                             <div class="lower-content">
                                 <div class="inner">
                                     <h4><a href="agents-details.html">Daisy Phillips</a></h4>
@@ -1251,7 +1249,7 @@
 
         <!-- cta-section -->
         <section class="cta-section bg-color-2">
-            <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-2.png);"></div>
+            <div class="pattern-layer" style="background-image: url({{ asset('frontend/assets/images/shape/shape-2.png') }});"></div>
             <div class="auto-container">
                 <div class="inner-box clearfix">
                     <div class="text pull-left">
@@ -1280,14 +1278,14 @@
                         <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><a href="blog-details.html"><img src="assets/images/news/news-1.jpg" alt=""></a></figure>
+                                    <figure class="image"><a href="blog-details.html"><img src="{{ asset('frontend/assets/images/news/news-1.jpg') }}" alt=""></a></figure>
                                     <span class="category">Featured</span>
                                 </div>
                                 <div class="lower-content">
                                     <h4><a href="blog-details.html">Including Animation In Your Design System</a></h4>
                                     <ul class="post-info clearfix">
                                         <li class="author-box">
-                                            <figure class="author-thumb"><img src="assets/images/news/author-1.jpg" alt=""></figure>
+                                            <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/news/author-1.jpg') }}" alt=""></figure>
                                             <h5><a href="blog-details.html">Eva Green</a></h5>
                                         </li>
                                         <li>April 10, 2020</li>
@@ -1306,14 +1304,14 @@
                         <div class="news-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><a href="blog-details.html"><img src="assets/images/news/news-2.jpg" alt=""></a></figure>
+                                    <figure class="image"><a href="blog-details.html"><img src="{{ asset('frontend/assets/images/news/news-2.jpg') }}" alt=""></a></figure>
                                     <span class="category">Featured</span>
                                 </div>
                                 <div class="lower-content">
                                     <h4><a href="blog-details.html">Taking The Pattern Library To The Next Level</a></h4>
                                     <ul class="post-info clearfix">
                                         <li class="author-box">
-                                            <figure class="author-thumb"><img src="assets/images/news/author-2.jpg" alt=""></figure>
+                                            <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/news/author-2.jpg') }}" alt=""></figure>
                                             <h5><a href="blog-details.html">George Clooney</a></h5>
                                         </li>
                                         <li>April 09, 2020</li>
@@ -1332,14 +1330,14 @@
                         <div class="news-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><a href="blog-details.html"><img src="assets/images/news/news-3.jpg" alt=""></a></figure>
+                                    <figure class="image"><a href="blog-details.html"><img src="{{ asset('frontend/assets/images/news/news-3.jpg') }}" alt=""></a></figure>
                                     <span class="category">Featured</span>
                                 </div>
                                 <div class="lower-content">
                                     <h4><a href="blog-details.html">How New Font Technologies Will Improve The Web</a></h4>
                                     <ul class="post-info clearfix">
                                         <li class="author-box">
-                                            <figure class="author-thumb"><img src="assets/images/news/author-3.jpg" alt=""></figure>
+                                            <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/news/author-3.jpg') }}" alt=""></figure>
                                             <h5><a href="blog-details.html">Simon Baker</a></h5>
                                         </li>
                                         <li>April 28, 2020</li>
@@ -1362,13 +1360,13 @@
 
         <!-- download-section -->
         <section class="download-section bg-color-3">
-            <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-3.png);"></div>
+            <div class="pattern-layer" style="background-image: url({{ asset('frontend/assets/images/shape/shape-3.png') }});"></div>
             <div class="auto-container">
                 <div class="row clearfix">
                     <div class="col-lg-6 col-md-6 col-sm-12 image-column">
                         <div class="image-box">
-                            <figure class="image image-1 wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="assets/images/resource/download-1.png" alt=""></figure>
-                            <figure class="image image-2 wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms"><img src="assets/images/resource/download-2.png" alt=""></figure>
+                            <figure class="image image-1 wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="{{ asset('frontend/assets/images/resource/download-1.png') }}" alt=""></figure>
+                            <figure class="image image-2 wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms"><img src="{{ asset('frontend/assets/images/resource/download-2.png') }}" alt=""></figure>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 content-column">
@@ -1437,12 +1435,12 @@
                                 </div>
                                 <div class="post-inner">
                                     <div class="post">
-                                        <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/resource/footer-post-1.jpg" alt=""></a></figure>
+                                        <figure class="post-thumb"><a href="blog-details.html"><img src="{{ asset('frontend/assets/images/resource/footer-post-1.jpg') }}" alt=""></a></figure>
                                         <h5><a href="blog-details.html">The Added Value Social Worker</a></h5>
                                         <p>Mar 25, 2020</p>
                                     </div>
                                     <div class="post">
-                                        <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/resource/footer-post-2.jpg" alt=""></a></figure>
+                                        <figure class="post-thumb"><a href="blog-details.html"><img src="{{ asset('frontend/assets/images/resource/footer-post-2.jpg') }}" alt=""></a></figure>
                                         <h5><a href="blog-details.html">Ways to Increase Trust</a></h5>
                                         <p>Mar 24, 2020</p>
                                     </div>
@@ -1469,9 +1467,9 @@
             <div class="footer-bottom">
                 <div class="auto-container">
                     <div class="inner-box clearfix">
-                        <figure class="footer-logo"><a href="index.html"><img src="assets/images/footer-logo.png" alt=""></a></figure>
+                        <figure class="footer-logo"><a href="index.html"><img src="{{ asset('frontend/assets/images/footer-logo.png') }}" alt=""></a></figure>
                         <div class="copyright pull-left">
-                            <p><a href="index.html">Realshed</a> &copy; 2021 All Right Reserved</p>
+                            <p><a href="index.html">ABASHON</a> &copy; 2021 All Right Reserved</p>
                         </div>
                         <ul class="footer-nav pull-right clearfix">
                             <li><a href="index.html">Terms of Service</a></li>
@@ -1493,23 +1491,23 @@
 
 
     <!-- jequery plugins -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/validation.js"></script>
-    <script src="assets/js/jquery.fancybox.js"></script>
-    <script src="assets/js/appear.js"></script>
-    <script src="assets/js/scrollbar.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/jQuery.style.switcher.min.js"></script>
-    <script src="assets/js/jquery-ui.js"></script>
-    <script src="assets/js/nav-tool.js"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/owl.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/wow.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/validation.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.fancybox.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/appear.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/scrollbar.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/isotope.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jQuery.style.switcher.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/nav-tool.js') }}"></script>
 
     <!-- main-js -->
-    <script src="assets/js/script.js"></script>
+    <script src="{{ asset('frontend/assets/js/script.js') }}"></script>
 
 </body><!-- End of .page_wrapper -->
 </html>
