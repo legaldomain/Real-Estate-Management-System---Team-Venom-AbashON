@@ -93,10 +93,7 @@
             <input type="text" name="address" value = "{{ $userData -> address}}">
         </div>
 
-        
-
-
-  
+    
 
 
         <div class="form-group message-btn">
