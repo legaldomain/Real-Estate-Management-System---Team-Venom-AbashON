@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Backend\PropertyTypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +30,14 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    //Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+   // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+   // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/user/profile', [UserController::class, 'UserProfile'])->name('user.profile');
+
+    Route::post('/user/profile/store', [UserController::class, 'UserProfileStore'])->name('user.profile.store');
+
+    Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
 });
 
 require __DIR__.'/auth.php';
@@ -82,13 +88,27 @@ Route::get('/', [AdminController::class, 'AdminGoBack'])->name('home');
 Route::get('/', [AgentController::class, 'AgentGoBack'])->name('home');
 
 
-//agent  group middleware start (protected)
+Route::middleware(['auth','role:admin'])->group(function(){
 
-Route::middleware(['auth','role:agent'])->group(function(){
-        //agent property add
-    Route::controller(AgentPropertyController::class)->group(function(){
-        Route::get('/agent/all/addproperty',[AgentPropertyontroller::class,'AgentAddProperty'])->name('agent.all.property');
+    // property type all route
+    Route::controller(PropertyTypeController::class)->group(function(){
+        Route::get('/all/type','AllType')->name('all.type');
+        Route::get('/add/type','AddType')->name('add.type');
+        Route::post('/store/type','StoreType')->name('store.type');
 
     });
+
    
-   }); //end agent middleware
+   }); //end grp admin middleware
+
+
+//agent  group middleware start (protected)
+
+//Route::middleware(['auth','role:agent'])->group(function(){
+        //agent property add
+   // Route::controller(AgentPropertyController::class)->group(function(){
+       // Route::get('/agent/all/addproperty',[AgentPropertyontroller::class,'AgentAddProperty'])->name('agent.all.property');
+
+  //  });
+   
+  // }); //end agent middleware
