@@ -30,7 +30,7 @@ class AdminController extends Controller
     public function AdminGoBack() {
 
 
-        return view('frontsite');
+        return view('frontend.index');
 
     } //end method
 

@@ -28,7 +28,7 @@ class AgentController extends Controller
     public function AgentGoBack() {
 
 
-        return view('frontsite');
+        return view('frontend.index');
 
     } //end method
 
