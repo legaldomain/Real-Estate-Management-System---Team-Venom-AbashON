@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\AgentPropertyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,7 +66,7 @@ Route::middleware(['auth','role:agent'])->group(function(){
 
  Route::post('/agent/profile/store', [AgentController::class, 'AgentProfileStore'])->name('agent.profile.store');
 
- Route::get('/agent/addproperty',[AdminController::class,'AgentAddProperty'])->name('agent.addproperty');
+ 
 
 }); //end agent middleware
 
@@ -78,3 +79,13 @@ Route::get('/', [AdminController::class, 'AdminGoBack'])->name('home');
 Route::get('/', [AgentController::class, 'AgentGoBack'])->name('home');
 
 
+//agent  group middleware start (protected)
+
+Route::middleware(['auth','role:agent'])->group(function(){
+        //agent property add
+    Route::controller(AgentPropertyController::class)->group(function(){
+        Route::get('/agent/all/addproperty',[AgentPropertyontroller::class,'AgentAddProperty'])->name('agent.all.property');
+
+    });
+   
+   }); //end agent middleware

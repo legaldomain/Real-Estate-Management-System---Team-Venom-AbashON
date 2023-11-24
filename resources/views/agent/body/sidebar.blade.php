@@ -19,7 +19,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="{{route('agent.all.property')}}" class="nav-link">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">All Property</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('add.property')}}" class="nav-link">
               <i class="link-icon" data-feather="box"></i>
               <span class="link-title">Add Property</span>
             </a>
