@@ -96,10 +96,7 @@
         
 
 
-  <div class="form-group">
-            <label for="formFile" class="form-label">Default file input example</label>
-  <input class="form-control" type="file" id="formFile">
-        </div>
+  
 
 
         <div class="form-group message-btn">
