@@ -4,7 +4,6 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
-use App\Http\Controllers\AgentPropertyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +17,7 @@ use App\Http\Controllers\AgentPropertyController;
 */
 
 Route::get('/', function () {
-    return view('frontsite');
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
