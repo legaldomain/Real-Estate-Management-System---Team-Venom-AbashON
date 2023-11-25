@@ -22,6 +22,11 @@ class Kernel extends ConsoleKernel
     {
         $this->load(__DIR__.'/Commands');
 
+        // Register the log:clear command
+        $this->commands([
+            \Illuminate\Foundation\Console\LogClearCommand::class,
+        ]);
+
         require base_path('routes/console.php');
     }
 }
