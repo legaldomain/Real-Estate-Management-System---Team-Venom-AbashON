@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\PropertyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,4 +78,5 @@ Route::get('/agent/login', [AgentController::class, 'AgentLogin'])->name('agent.
 Route::get('/', [AdminController::class, 'AdminGoBack'])->name('home');
 Route::get('/', [AgentController::class, 'AgentGoBack'])->name('home');
 
-
+Route::get('/properties', [PropertyController::class, 'index']);
+Route::get('/property/{id}', [PropertyController::class, 'show']);
