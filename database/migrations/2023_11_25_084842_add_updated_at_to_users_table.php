@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->timestamps(); // This line will add both 'created_at' and 'updated_at'
-        });
+        // Schema::table('users', function (Blueprint $table) {
+            // $table->timestamps(); // This line will add both 'created_at' and 'updated_at'
+        // });
     }
 
     /**

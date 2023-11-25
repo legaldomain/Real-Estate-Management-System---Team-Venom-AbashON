@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('location');
             $table->decimal('price', 10, 2);
             // Add more fields as needed
-            $table->timestamps();
         });
     }
 
