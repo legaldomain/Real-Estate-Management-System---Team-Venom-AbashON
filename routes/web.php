@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\PropertyTypeController;
+use App\Http\Controllers\Backend\PropertyController;
 
 
 
@@ -79,7 +80,7 @@ Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.
 
 
 
-
+//admin group middleware start (protected)
 //admin group middleware extend to property all
 
 Route::middleware(['auth','role:admin'])->group(function(){
@@ -114,7 +115,20 @@ Route::middleware(['auth','role:admin'])->group(function(){
         Route::post('/update/type', 'UpdateType' )->name('update.type');
         Route::get('/delete/type/{id}', 'DeleteType' )->name('delete.type');
    
-   }); //end grp adming middleware
+   }); 
 
 
-});
+//prop all route 
+   Route::controller (PropertyController::class) -> group(function(){
+
+
+    Route::get('/all/property', 'AllProperty' )->name('all.property');
+   
+
+}); 
+
+
+   
+
+
+});//end grp adming middleware
