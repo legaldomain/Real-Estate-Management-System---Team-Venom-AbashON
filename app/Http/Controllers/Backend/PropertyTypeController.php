@@ -47,4 +47,54 @@ class PropertyTypeController extends Controller
         
 
     } //End method
+
+    public function EditType($id){
+
+        
+        $types = PropertyType::findOrFail($id);
+        return view('backend.type.edit_type',compact('types'));
+
+    } //End method
+
+
+    public function UpdateType(Request $request){
+
+        $pid=$request->id;
+
+        PropertyType::findOrFail($pid)->update([
+            'type_name' => $request->type_name,
+            'type_icon' => $request->type_icon
+
+
+        ]);
+
+        $notification = array(
+
+            'message' => ' Property Type Updated Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('all.type')->with($notification);
+        
+
+    } //End method
+
+    public function DeleteType($id){
+
+        
+        PropertyType::findOrFail($id)->delete();
+    
+        $notification = array(
+
+            'message' => ' Property Type Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+        
+
+    } //End method
+
+
+
 }
