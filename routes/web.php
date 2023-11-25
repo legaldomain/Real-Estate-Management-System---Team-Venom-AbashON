@@ -2,9 +2,6 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\AgentController;
-use App\Http\Controllers\PropertyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +15,7 @@ use App\Http\Controllers\PropertyController;
 */
 
 Route::get('/', function () {
-    return view('frontsite');
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
@@ -32,51 +29,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-
-
-//admin group middleware start (protected)
-
-Route::middleware(['auth','role:admin'])->group(function(){
-
- Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
-
- Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
-
- Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
-
-
- Route::post('/admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
-
- Route::get('/admin/addagent',[AdminController::class,'AdminAddAgent'])->name('admin.addagent');
- Route::post('/admin/addagent/submit', [AdminController::class, 'addagent'])->name('admin.addagent.submit');
-
-}); //end grp admin middleware
-
-
-//agent  group middleware start (protected)
-
-Route::middleware(['auth','role:agent'])->group(function(){
-
- Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
-
- Route::get('/agent/logout', [AgentController::class, 'AgentLogout'])->name('agent.logout');
-
- Route::get('/agent/profile', [AgentController::class, 'AgentProfile'])->name('agent.profile');
-
-
- Route::post('/agent/profile/store', [AgentController::class, 'AgentProfileStore'])->name('agent.profile.store');
-
- Route::get('/agent/addproperty',[AdminController::class,'AgentAddProperty'])->name('agent.addproperty');
-
-}); //end agent middleware
-
-
-
-Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
-Route::get('/agent/login', [AgentController::class, 'AgentLogin'])->name('agent.login');
-
-Route::get('/', [AdminController::class, 'AdminGoBack'])->name('home');
-Route::get('/', [AgentController::class, 'AgentGoBack'])->name('home');
-
-Route::get('/properties', [PropertyController::class, 'index']);
-Route::get('/property/{id}', [PropertyController::class, 'show']);
