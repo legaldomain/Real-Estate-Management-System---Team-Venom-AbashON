@@ -22,4 +22,24 @@ class PropertyController extends Controller
 
 
     }//endmethod
+
+
+
+    public function AddProperty(){
+
+        return view('backend.property.add_property');
+
+
+
+
+
+
+
+
+    }//endmethod
+
+
+
+
+
 }

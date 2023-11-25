@@ -76,7 +76,7 @@
                   <a href="{{route('all.property')}}" class="nav-link">All property/a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/email/read.html" class="nav-link">Add property </a>
+                  <a href="{{route('add.property')}}" class="nav-link">Add property </a>
                 </li>
               </ul>
             </div>
