@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\PropertyType;
+use App\Models\Facilities;
 
 class PropertyTypeController extends Controller
 {
@@ -96,5 +97,41 @@ class PropertyTypeController extends Controller
     } //End method
 
 
+
+
+    /////////////////Facility Methods////////////
+
+    public function AllFacility(){
+
+        $facility = Facilities::latest()->get();
+        return view('backend.facilities.all_facility',compact('facility'));
+
+    } //End method
+
+    public function AddFacility(){
+
+        
+        return view('backend.facilities.add_facility');
+
+    } //End method
+
+    public function StoreFacility(Request $request){
+
+
+        Facilities::insert([
+            'facility_name' => $request->facility_name
+
+        ]);
+
+        $notification = array(
+
+            'message' => 'Facility Added Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('all.facility')->with($notification);
+        
+
+    } //End method
 
 }

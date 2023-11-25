@@ -101,6 +101,18 @@ Route::middleware(['auth','role:admin'])->group(function(){
         
 
     });
+    
+    //facility routes
+    Route::controller(PropertyTypeController::class)->group(function(){
+        Route::get('/all/facility','AllFacility')->name('all.facility');
+        Route::get('/add/facility','AddFacility')->name('add.facility');
+        Route::post('/store/facility','StoreFacility')->name('store.facility');
+        //Route::get('/edit/facility/{id}','EditFacility')->name('edit.facility');
+        //Route::post('/update/type','UpdateType')->name('update.type');
+        //Route::get('/delete/type/{id}','DeleteType')->name('delete.type');
+        
+
+    });
 
    
    }); //end grp admin middleware
