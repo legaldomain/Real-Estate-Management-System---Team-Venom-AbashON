@@ -30,8 +30,8 @@
                         <td>{{$key+1}}</td>
                         <td>{{$item->facility_name}}</td>
                         <td>
-        <a href="{{route('edit.type',$item->id)}}" class="btn btn-inverse-warning"> Edit</a>
-        <a href="{{route('delete.type',$item->id)}}" class="btn btn-inverse-danger" id='delete'> Delete</a>
+        <a href="" class="btn btn-inverse-warning"> Edit</a>
+        <a href="" class="btn btn-inverse-danger" id='delete'> Delete</a>
                         </td>
                         
                       </tr>
