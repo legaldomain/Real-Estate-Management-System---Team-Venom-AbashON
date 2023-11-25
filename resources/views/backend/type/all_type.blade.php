@@ -52,7 +52,7 @@
         <td>{{ $item->type_icon }}</td>
         <td>
     <a href="{{route('edit.type',$item->id)}}"  class="btn btn-warning"> Edit </a>
-    <a href=""  class="btn btn-danger"> Delete </a>
+    <a href="{{route('delete.type',$item->id)}}"  class="btn btn-danger" id="delete"> Delete </a>
 
         </td>
        
