@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-
 class UserController extends Controller
 {
    public function Index(){
@@ -16,9 +15,10 @@ class UserController extends Controller
 
     } //end method
 
+    
 
     public function UserProfile(){
-        
+
         $id = Auth::user()->id;
         $userData = User::find($id);
         return view('frontend.dashboard.edit_profile',compact('userData'));
