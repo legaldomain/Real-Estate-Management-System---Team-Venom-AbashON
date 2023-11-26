@@ -9,6 +9,7 @@ use App\Models\Facility;
 use App\Models\Property;
 
 
+
 class PropertyController extends Controller
 {
     // 
@@ -37,6 +38,8 @@ class PropertyController extends Controller
 
 
     }//endmethod
+
+    
 
 
 
