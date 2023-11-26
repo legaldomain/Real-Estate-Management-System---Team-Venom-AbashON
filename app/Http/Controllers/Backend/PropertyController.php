@@ -42,7 +42,7 @@ class PropertyController extends Controller
         $pcode = IdGenerator::generate(['table' => 'properties','field' => 'property_code','length' => 5, 'prefix' => 'PC' ]);
 
 
-        $image = $request->file('property_thambnail');
+        $image = $request->file('property_thumbnail');
         $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
         Image::make($image)->resize(370,250)->save('upload/property/thumbnail/'.$name_gen);
         $save_url = 'upload/property/thambnail/'.$name_gen;
@@ -105,6 +105,30 @@ class PropertyController extends Controller
         } // End Foreach
        
         /// End Multiple Image ////
+
+        /// Property Service/benefits ////
+
+        $services = Count($request->service_name);
+
+        if ($services != NULL) {
+           for ($i=0; $i < $services; $i++) { 
+               $fcount = new PropertyService();
+               $fcount->property_id = $property_id;
+               $fcount->service_name = $request->service_name[$i];
+               $fcount->distance = $request->distance[$i];
+               $fcount->save();
+           }
+        }
+
+         /// End Property Service  ////
+
+
+            $notification = array(
+            'message' => 'Property Inserted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('all.property')->with($notification);
 
     }// End Method 
 
