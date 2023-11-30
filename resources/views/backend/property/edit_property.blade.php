@@ -169,7 +169,7 @@
                 <select name="facility_id[]" class="js-example-basic-multiple form-select" multiple="multiple" data-width="100%">
 
                 @foreach($facilities as $facility)
-                <option value="{{ $facility->id }}">{{ $facility->facility_name }}</option>
+                <option value="{{ $facility->id }}" {{(in_array($facility->id,$property_facility)) ?'selected' :'' }} >{{ $facility->facility_name }}</option>
                 @endforeach
 
             </select>
@@ -219,7 +219,7 @@
 
  <div class="mb-3">
             <div class="form-check form-check-inline">
-<input type="checkbox" name="featured" value="1" class="form-check-input" id="checkInline1">
+<input type="checkbox" name="featured" value="1" class="form-check-input" id="checkInline1"  {{  $property->featured == '1' ? 'checked' :''}}>
                 <label class="form-check-label" for="checkInline1">
                    Featured Property 
                 </label>
@@ -228,7 +228,7 @@
 
          <div class="form-check form-check-inline">
 <input type="checkbox" name="hot" value="1" class="form-check-input" id="checkInline">
-                <label class="form-check-label" for="checkInline">
+                <label class="form-check-label" for="checkInline"  {{  $property->hot_exclusive == '1' ? 'checked' :''}}>
                     Exclusive Property 
                 </label>
             </div>
