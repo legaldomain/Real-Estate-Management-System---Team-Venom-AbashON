@@ -37,7 +37,7 @@ class PropertyController extends Controller
 
         $facil = $request->facility_id;
         $facility = implode(",", $facil);
-        // dd($amenites);
+        // dd($amenites); 
 
         $pcode = IdGenerator::generate(['table' => 'properties','field' => 'property_code','length' => 5, 'prefix' => 'PC' ]);
 
