@@ -140,7 +140,8 @@ License: For each use you must have a valid license purchased only from above li
 	<!-- Custom js for this page -->
 		<script src="{{asset('backend/assets/js/data-table.js')}}"></script>
 	<!-- End custom js for this page -->
-
+	<script src="{{asset('backend/assets/vendors/tinymce/tinymce.min.js')}}"></script>
+	<script src="{{asset('backend/assets/js/tinymce.js')}}"></script>
 
 
 </body>

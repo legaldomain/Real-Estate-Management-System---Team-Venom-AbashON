@@ -15,7 +15,10 @@
             <div class="card">
 							<div class="card-body">
 								<h6 class="card-title">Add property</h6>
-									<form>
+									<form method = "post" action="{{route('store.property')}}" id="myForm" enctype="multipart/form-data">
+
+									@csrf
+
 										<div class="row">
 											<div class="col-sm-6">
 												<div class="mb-3">
@@ -62,7 +65,7 @@
                                             <div class="col-sm-6">
 												<div class="mb-3">
 													<label class="form-label">Main Thumbnail image</label>
-													<input type="file" name = "property_thumbnail" class="form-control">
+													<input type="file" name = "property_thumbnail" class="form-control" onChange="mainThamUrl(this)">
 												</div>
 											</div><!-- Col -->
 
@@ -250,10 +253,47 @@
 											</div><!-- Col -->
 											
 										</div><!-- Row -->
+
+										<div class="col-sm-8">
+												<div class="mb-3">
+													<label class="form-label">short description</label>
+												<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+													
+													
+												</div>
+											</div><!-- Col -->
+
+											<div class="col-sm-12">
+												<div class="mb-3">
+													<label class="form-label">long description</label>
+													<textarea class="form-control" name="tinymce" id="tinymceExample" rows="10"></textarea>
+													
+													
+												</div>
+											</div><!-- Col -->
+
+<hr>
+
+<div class="mb-3">
+										<div class="form-check form-check-inline">
+                      <input type="checkbox" name = "featured" value = "1" class="form-check-input" id="checkInline1">
+											<label class="form-check-label" for="checkInline1">
+												Featured property
+											</label>
+										</div>
+										<div class="form-check form-check-inline">
+                      <input type="checkbox" name = "hot" value = "1" class="form-check-input" id="checkInline">
+											<label class="form-check-label" for="checkInline">
+												HOT
+											</label>
+										</div>
+
+
 									</form>
 									<button type="button" class="btn btn-primary submit">Submit form</button>
 							</div>
 						</div>
+</hr>
               
             </div>
           </div>

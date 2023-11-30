@@ -10,6 +10,7 @@ use App\Models\Property;
 use App\Models\Amenities;
 use App\Models\PropertyType;
 use App\Models\User;
+use Intervention\Image\Facades\Image;
 
 
 
@@ -40,6 +41,20 @@ class PropertyController extends Controller
 
 
 
+
+
+
+
+
+    }//endmethod
+
+
+    public function StoreProperty(Request $request){
+
+        $image = $request->file('property_thumbnail');
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        Image::make($image)->resize(370,250)->save('upload/property/thambnail'.$name_gen);
+        $save_url = 'upload/property/thambnail/'.$name_gen;
 
 
 
