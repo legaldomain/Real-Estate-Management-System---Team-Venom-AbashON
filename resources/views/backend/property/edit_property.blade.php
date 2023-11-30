@@ -16,8 +16,13 @@
        <div class="card">
     <div class="card-body">
         <h6 class="card-title">Edit Property </h6>
-        <form method="post" action="{{ route('store.property') }}" id="myForm" enctype="multipart/form-data">
+        <form method="post" action="{{ route('update.property') }}" id="myForm" enctype="multipart/form-data">
                 @csrf
+
+
+        <input type="hidden" name = "id" value = "{{$property ->id}}">
+
+
 
 
     <div class="row">
@@ -227,7 +232,7 @@
 
 
          <div class="form-check form-check-inline">
-<input type="checkbox" name="hot" value="1" class="form-check-input" id="checkInline">
+<input type="checkbox" name="hot_exclusive" value="1" class="form-check-input" id="checkInline">
                 <label class="form-check-label" for="checkInline"  {{  $property->hot_exclusive == '1' ? 'checked' :''}}>
                     Exclusive Property 
                 </label>
