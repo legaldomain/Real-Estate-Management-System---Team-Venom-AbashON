@@ -74,6 +74,14 @@ class AdminController extends Controller
 
     }//end method
 
+    public function AdminAllAgent() {
+
+        $allagent= User::where('role','agent')->get();
+        return view('admin.admin_all_agent',compact('allagent'));
+
+
+    } //end method
+
     public function AdminAddAgent() {
 
         return view('admin.admin_add_agent');

@@ -19,6 +19,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{route('admin.allagent') }}" class="nav-link">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">All Agent</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{route('admin.addagent') }}" class="nav-link">
               <i class="link-icon" data-feather="box"></i>
               <span class="link-title">Add Agent</span>

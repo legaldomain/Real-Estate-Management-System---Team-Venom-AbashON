@@ -1,12 +1,12 @@
-@extends('admin.admin_dashboard')
-@section('admin')
+@extends('agent.agent_dashboard')
+@section('agent')
 
 
 <div class="page-content">
 
 				<nav class="page-breadcrumb">
 					<ol class="breadcrumb">
-	  <a href="{{ route('add.property') }}" class="btn btn-inverse-info"> Add New Property  </a>
+	  <a href="{{ route('agent.add.property') }}" class="btn btn-inverse-info"> Add New Property  </a>
 					</ol>
 				</nav>
 

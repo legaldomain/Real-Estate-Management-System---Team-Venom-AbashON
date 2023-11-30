@@ -7,6 +7,7 @@ use App\Http\Controllers\AgentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\PropertyTypeController;
 use App\Http\Controllers\Backend\PropertyController;
+use App\Http\Controllers\Agent\AgentPropertyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +60,8 @@ Route::middleware(['auth','role:admin'])->group(function(){
 
 
  Route::post('/admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
+
+ Route::get('/admin/allagent',[AdminController::class,'AdminAllAgent'])->name('admin.allagent');
 
  Route::get('/admin/addagent',[AdminController::class,'AdminAddAgent'])->name('admin.addagent');
  Route::post('/admin/addagent/submit', [AdminController::class, 'addagent'])->name('admin.addagent.submit');
@@ -130,13 +133,15 @@ Route::middleware(['auth','role:admin'])->group(function(){
    }); //end grp admin middleware
 
 
-//agent  group middleware start (protected)
+//agent  group middleware start
 
-//Route::middleware(['auth','role:agent'])->group(function(){
+Route::middleware(['auth','role:agent'])->group(function(){
         //agent property add
-   // Route::controller(AgentPropertyController::class)->group(function(){
-       // Route::get('/agent/all/addproperty',[AgentPropertyontroller::class,'AgentAddProperty'])->name('agent.all.property');
+   Route::controller(AgentPropertyController::class)->group(function(){
+       Route::get('/agent/all/property','AgentAllProperty')->name('agent.all.property');
+       Route::get('/agent/add/property', 'AgentAddProperty')->name('agent.add.property'); 
+       Route::post('/agent/store/property', 'AgentStoreProperty')->name('agent.store.property');
 
-  //  });
+ });
    
-  // }); //end agent middleware
+   }); //end agent middleware
