@@ -10,3 +10,4 @@ class Property extends Model
     use HasFactory;
     protected $guarded = [];
 }
+
