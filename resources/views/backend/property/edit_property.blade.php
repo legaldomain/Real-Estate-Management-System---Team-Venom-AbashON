@@ -268,6 +268,76 @@
 
 
 
+        <!-- ///PROPERTY MAIN THUMBNAIL IMAGE UPDATE  -->
+
+<div class="page-content" style="margin-top: -35px;">
+
+
+            <div class="row profile-body">
+                <div class="col-md-12 col-xl-12 middle-wrapper">
+                    <div class="row">
+
+             <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">Edit Main thumbnail photo </h6>
+                <form method="post" action="{{ route('update.property') }}" id="myForm" enctype="multipart/form-data">
+                    @csrf
+
+
+                    <input type="hidden" name="id" value="{{ $property->id}}">
+                    <input type="hidden" name="old_img" value="{{ $property->property_thumbnail}}">
+
+                    <div class="row-mb-3">
+            <div class="form-group col-md-6">
+                <label class="form-label">Main Thumbnail </label>
+                <input type="file" name="property_thumbnail" class="form-control" onChange="mainThumUrl(this)" >
+
+                <img src="" id="mainThmb">
+            </div>
+
+
+            <div class="form-group col-md-6">
+                <label class="form-label"> existing image -></label>
+                <img src="{{ asset($property->property_thumbnail)  }}" style="width:100px; height:100px;">
+                
+            </div>
+            
+        </div><!-- Col -->
+
+
+    
+
+        <button type="submit" class="btn btn-primary">Save changes </button>
+                </form>
+            </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ///END PROPERTY MAIN THUMBNAIL IMAGE UPDATE  -->
+
+
+
+
 <script type="text/javascript">
     $(document).ready(function (){
         $('#myForm').validate({
