@@ -15,6 +15,18 @@ class UserController extends Controller
 
     } //end method
 
+    public function Sign_in(){
+        return view('auth.login');
+    
+    
+        } //end method
+
+    public function home(){
+        return view('frontend.index');
+        
+        
+        } //end method
+
     
 
     public function UserProfile(){
