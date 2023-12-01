@@ -141,6 +141,8 @@ Route::middleware(['auth','role:agent'])->group(function(){
        Route::get('/agent/all/property','AgentAllProperty')->name('agent.all.property');
        Route::get('/agent/add/property', 'AgentAddProperty')->name('agent.add.property'); 
        Route::post('/agent/store/property', 'AgentStoreProperty')->name('agent.store.property');
+       Route::get('/agent/edit/property/{id}', 'AgentEditProperty')->name('agent.edit.property'); 
+       Route::post('/agent/update/property', 'AgentUpdateProperty')->name('agent.update.property'); 
 
  });
    

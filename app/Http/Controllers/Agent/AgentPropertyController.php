@@ -133,5 +133,74 @@ class AgentPropertyController extends Controller
 
 
     }// End Method
+
+
+    public function AgentEditProperty($id){
+
+        $services = PropertyService::where('property_id',$id)->get();
+        $property = Property::findOrFail($id);
+
+        $type = $property->facility_id;
+        $property_faci = explode(',', $type);
+
+        $multiImage = MultiImage::where('property_id',$id)->get();
+
+        $propertytype = PropertyType::latest()->get();
+        $facilities = Facilities::latest()->get();
+
+        return view('agent.property.edit_property',compact('property','propertytype','facilities','property_faci','multiImage','services'));
+
+    }// End Method 
+
+
+    public function AgentUpdateProperty(Request $request){
+
+        $facil = $request->facility_id;
+        $facilities = implode(",", $facil);
+
+        $property_id = $request->id;
+
+        Property::findOrFail($property_id)->update([
+
+            'ptype_id' => $request->ptype_id,
+            'facility_id' => $facilities,
+            'property_name' => $request->property_name,
+            'property_slug' => strtolower(str_replace(' ', '-', $request->property_name)), 
+            'property_status' => $request->property_status,
+
+            'lowest_price' => $request->lowest_price,
+            'max_price' => $request->max_price,
+            'short_descp' => $request->short_descp,
+            'long_descp' => $request->long_descp,
+            'bedrooms' => $request->bedrooms,
+            'bathrooms' => $request->bathrooms,
+            'garage' => $request->garage,
+            
+
+            'property_size' => $request->property_size,
+            'property_video' => $request->property_video,
+            'address' => $request->address,
+            'city' => $request->city,
+            'state' => $request->state,
+            'postal_code' => $request->postal_code,
+
+            'neighborhood' => $request->neighborhood,
+            'latitude' => $request->latitude,
+            'longitude' => $request->longitude,
+            'featured' => $request->featured,
+            'hot_exclusive' => $request->hot,
+            'agent_id' => Auth::user()->id, 
+            'updated_at' => Carbon::now(), 
+
+        ]);
+
+         $notification = array(
+            'message' => 'Property Updated Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('agent.all.property')->with($notification); 
+
+    }// End Method 
     
 }
