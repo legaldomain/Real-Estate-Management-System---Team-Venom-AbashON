@@ -8,6 +8,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\PropertyTypeController;
 use App\Http\Controllers\Backend\PropertyController;
 use App\Http\Controllers\Agent\AgentPropertyController;
+use App\Http\Controllers\Backend\StateController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -134,6 +136,18 @@ Route::middleware(['auth','role:admin'])->group(function(){
     
     });
 
+     // State  All Route 
+    Route::controller(StateController::class)->group(function(){
+
+        Route::get('/all/state', 'AllState')->name('all.state'); 
+        Route::get('/add/state', 'AddState')->name('add.state');
+        Route::post('/store/state', 'StoreState')->name('store.state');  
+        //Route::get('/edit/type/{id}', 'EditType')->name('edit.type');
+        //Route::post('/update/type', 'UpdateType')->name('update.type');
+        //Route::get('/delete/type/{id}', 'DeleteType')->name('delete.type');  
+
+});
+
    
    }); //end grp admin middleware
 
@@ -152,3 +166,13 @@ Route::middleware(['auth','role:agent'])->group(function(){
  });
    
    }); //end agent middleware
+
+
+
+   
+
+// Frontend Property Details All Route
+
+
+  // Home Page Buy Seach Option
+  Route::post('/buy/property/search', [IndexController::class, 'BuyPropertySeach'])->name('buy.property.search');
