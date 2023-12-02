@@ -14,10 +14,10 @@
             </div>
             <div class="auto-container">
                 <div class="content-box clearfix">
-                    <h1>Property Details 01</h1>
+                    <h1>{{ $property->property_name}}</h1>
                     <ul class="bread-crumb clearfix">
                         <li><a href="index.html">Home</a></li>
-                        <li>Property Details 01</li>
+                        <li>{{ $property->property_name}}</li>
                     </ul>
                 </div>
             </div>
@@ -30,11 +30,11 @@
             <div class="auto-container">
                 <div class="top-details clearfix">
                     <div class="left-column pull-left clearfix">
-                        <h3>The Citizen Apartment</h3>
+                        <h3>{{ $property->property_name}}</h3>
                         <div class="author-info clearfix">
                             <div class="author-box pull-left">
                                 <figure class="author-thumb"><img src="assets/images/feature/author-1.jpg" alt=""></figure>
-                                <h6>Michael Bean</h6>
+                                <h6>{{ $property->short_descp}}</h6>
                             </div>
                             <ul class="rating clearfix pull-left">
                                 <li><i class="icon-39"></i></li>
@@ -48,11 +48,11 @@
                     <div class="right-column pull-right clearfix">
                         <div class="price-inner clearfix">
                             <ul class="category clearfix pull-left">
-                                <li><a href="property-details.html">Building</a></li>
-                                <li><a href="property-details.html">For Buy</a></li>
+                                <li><a href="property-details.html">{{ $property->type->type_name}}</a></li>
+                                <li><a href="property-details.html">For {{ $property->property_status}}</a></li>
                             </ul>
                             <div class="price-box pull-right">
-                                <h3>$30,000.00</h3>
+                                <h3>{{ $property->lowest_price}}</h3>
                             </div>
                         </div>
                         <ul class="other-option pull-right clearfix">
@@ -68,11 +68,16 @@
                         <div class="property-details-content">
                             <div class="carousel-inner">
                                 <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
-                                    <figure class="image-box"><img src="assets/images/resource/property-details-1.jpg" alt=""></figure>
-                                    <figure class="image-box"><img src="assets/images/resource/property-details-1.jpg" alt=""></figure>
-                                    <figure class="image-box"><img src="assets/images/resource/property-details-1.jpg" alt=""></figure>
+
+                                    @foreach($multiImage as $img)
+                                    <figure class="image-box"><img src="{{ asset($img->photo_name)}}" alt=""></figure>
+                                    @endforeach
+
                                 </div>
                             </div>
+
+
+
                             <div class="discription-box content-widget">
                                 <div class="title-box">
                                     <h4>Property Description</h4>
