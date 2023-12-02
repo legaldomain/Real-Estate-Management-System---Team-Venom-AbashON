@@ -10,7 +10,7 @@ use App\Http\Controllers\Backend\PropertyController;
 use App\Http\Controllers\Agent\AgentPropertyController;
 use App\Http\Controllers\Backend\StateController;
 use App\Http\Controllers\Frontend\IndexController;
-
+use App\Http\Controllers\Frontend\WishlistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +46,16 @@ Route::middleware('auth')->group(function () {
     Route::post('/user/profile/store', [UserController::class, 'UserProfileStore'])->name('user.profile.store');
 
     Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
+
+
+     // User WishlistAll Route 
+    Route::controller(WishlistController::class)->group(function(){
+
+        Route::get('/user/wishlist', 'UserWishlist')->name('user.wishlist'); 
+        Route::get('/get-wishlist-property', 'GetWishlistProperty'); 
+
+
+});
 });
 
 require __DIR__.'/auth.php';
@@ -172,8 +182,11 @@ Route::middleware(['auth','role:agent'])->group(function(){
 
    
 
-// Frontend Property Details All Route
+  // Frontend Property Details All Route
   Route::get('/property/details/{id}/{slug}', [IndexController::class, 'PropertyDetails']);
+
+  // Wishlist Add Route 
+  Route::post('/add-to-wishList/{property_id}', [WishlistController::class, 'AddToWishList']); 
 
   // Home Page Buy Seach Option
   Route::post('/buy/property/search', [IndexController::class, 'BuyPropertySeach'])->name('buy.property.search');

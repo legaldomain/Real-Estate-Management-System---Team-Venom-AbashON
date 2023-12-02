@@ -7,11 +7,6 @@ $property = App\Models\Property::where('status','1')->where('featured','1')->lim
 
 
 
-
-
-
-
-
 <section class="feature-section sec-pad bg-color-1">
             <div class="auto-container">
                 <div class="sec-title centred">
@@ -45,10 +40,10 @@ $property = App\Models\Property::where('status','1')->where('featured','1')->lim
                                             <h6>Start From</h6>
                                             <h4>{{$item ->	lowest_price}}</h4>
                                         </div>
-                                        <ul class="other-option pull-right clearfix">
-                                            <li><a href="property-details.html"><i class="icon-12"></i></a></li>
-                                            <li><a href="property-details.html"><i class="icon-13"></i></a></li>
-                                        </ul>
+                                <ul class="other-option pull-right clearfix">
+                                    <li><a href="property-details.html"><i class="icon-12"></i></a></li>
+                                    <li><a aria-label="Add To Wishlist" class="action-btn" id="{{ $item->id }}" onclick="addToWishList(this.id)"><i class="icon-13"></i></a></li>
+                                </ul>
                                     </div>
                                     <p>{{$item ->	short_descp}}</p>
                                     <ul class="more-details clearfix">
