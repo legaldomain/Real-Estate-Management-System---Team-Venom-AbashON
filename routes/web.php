@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\PropertyTypeController;
 use App\Http\Controllers\Backend\PropertyController;
 use App\Http\Controllers\Agent\AgentPropertyController;
 use App\Http\Controllers\Backend\StateController;
+use App\Http\Controllers\Frontend\IndexController;
 
 
 /*
@@ -172,7 +173,7 @@ Route::middleware(['auth','role:agent'])->group(function(){
    
 
 // Frontend Property Details All Route
-
+  Route::get('/property/details/{id}/{slug}', [IndexController::class, 'PropertyDetails']);
 
   // Home Page Buy Seach Option
   Route::post('/buy/property/search', [IndexController::class, 'BuyPropertySeach'])->name('buy.property.search');
