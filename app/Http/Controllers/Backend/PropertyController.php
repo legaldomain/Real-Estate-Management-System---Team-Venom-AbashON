@@ -37,7 +37,7 @@ class PropertyController extends Controller
 
         $facil = $request->facility_id;
         $facility = implode(",", $facil);
-        // dd($amenites);
+        // dd($amenites); 
 
         $pcode = IdGenerator::generate(['table' => 'properties','field' => 'property_code','length' => 5, 'prefix' => 'PC' ]);
 
@@ -131,6 +131,132 @@ class PropertyController extends Controller
         return redirect()->route('all.property')->with($notification);
 
     }// End Method 
+
+
+    public function EditProperty($id){
+
+        $property = Property::findOrFail($id);
+
+
+        $type = $property->facility_id;
+        $property_facility = explode(',', $type);
+
+
+
+        $propertytype = PropertyType::latest()->get();
+        $facilities = Facilities::latest()->get();
+        $activeAgent = User::where('status','active')->where('role','agent')->latest()->get();
+
+        return view('backend.property.edit_property',compact('property','propertytype','facilities','activeAgent','property_facility'));
+
+         
+
+
+    }// End Method 
+
+
+
+    public function UpdateProperty(Request $request){
+
+
+        $facil = $request->facility_id;
+        $facility = implode(",", $facil);
+
+        
+
+        $property_id =$request->id;
+        Property::findOrFail($property_id)->update([
+
+            'ptype_id' => $request->ptype_id,
+            'facility_id' => $facility,
+            'property_name' => $request->property_name,
+            'property_slug' => strtolower(str_replace(' ', '-', $request->property_name)),
+            'property_status' => $request->property_status,
+
+            'lowest_price' => $request->lowest_price,
+            'max_price' => $request->max_price,
+            'short_descp' => $request->short_descp,
+            'long_descp' => $request->long_descp,
+            'bedrooms' => $request->bedrooms,
+            'bathrooms' => $request->bathrooms,
+            'garage' => $request->garage,
+            
+
+            'property_size' => $request->property_size,
+            'property_video' => $request->property_video,
+            'address' => $request->address,
+            'city' => $request->city,
+            'state' => $request->state,
+            'postal_code' => $request->postal_code,
+
+            'neighborhood' => $request->neighborhood,
+            'latitude' => $request->latitude,
+            'longitude' => $request->longitude,
+            'featured' => $request->featured,
+            'hot_exclusive' => $request->hot,
+            'agent_id' => $request->agent_id,
+            'updated_at' => Carbon::now(), 
+
+
+
+        ]);
+
+        $notification = array(
+            'message' => 'Property Update Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('all.property')->with($notification);
+
+
+    }// End Method 
+
+
+
+    public function UpdatePropertyThumbnail(Request $request){
+
+        $pro_id = $request->id;
+        $oldImage = $request->old_img;
+
+        $image = $request->file('property_thumbnail');
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        Image::make($image)->resize(370,250)->save('upload/property/thumbnail/'.$name_gen);
+        $save_url = 'upload/property/thumbnail/'.$name_gen;
+
+        if (file_exists($oldImage)) {
+            
+            unlink($oldImage);
+
+
+        }
+
+        Property::findOrFail($pro_id)->update([
+            
+            'property_thumbnail' =>$save_url,
+            'updated_at' => Carbon::now(),
+
+
+        ]);
+
+        $notification = array(
+            'message' => 'Property image thumb Successfully updated',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+
+
+
+
+    }   // End Method 
+
+
+
+
+
+
+
 
 
 }

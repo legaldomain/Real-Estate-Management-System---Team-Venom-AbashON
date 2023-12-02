@@ -14,3 +14,4 @@ class Property extends Model
         return $this->belongsTo(PropertyType::class,'ptype_id','id');
     }
 }
+
