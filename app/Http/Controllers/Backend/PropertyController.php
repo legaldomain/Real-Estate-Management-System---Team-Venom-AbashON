@@ -13,6 +13,7 @@ use App\Models\User;
 use Intervention\Image\Facades\Image;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 use Carbon\Carbon;
+use App\Models\State;
 
 class PropertyController extends Controller
 {
@@ -26,9 +27,10 @@ class PropertyController extends Controller
     public function AddProperty(){
 
         $propertytype = PropertyType::latest()->get();
+        $pstate = State::latest()->get();
         $facilities = Facilities::latest()->get();
         $activeAgent = User::where('status','active')->where('role','agent')->latest()->get();
-        return view('backend.property.add_property',compact('propertytype','facilities','activeAgent'));
+        return view('backend.property.add_property',compact('propertytype','facilities','activeAgent','pstate'));
 
     }// End Method
 
@@ -144,10 +146,11 @@ class PropertyController extends Controller
 
 
         $propertytype = PropertyType::latest()->get();
+        $pstate = State::latest()->get();
         $facilities = Facilities::latest()->get();
         $activeAgent = User::where('status','active')->where('role','agent')->latest()->get();
 
-        return view('backend.property.edit_property',compact('property','propertytype','facilities','activeAgent','property_facility'));
+        return view('backend.property.edit_property',compact('property','propertytype','facilities','activeAgent','property_facility','pstate'));
 
          
 
