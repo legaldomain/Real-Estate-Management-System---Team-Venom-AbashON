@@ -28,9 +28,10 @@ class IndexController extends Controller
 
 
         $multiImage = MultiImage::where('property_id',$id)->get();
+        $distance = PropertyService::where('property_id',$id)->get();
 
          
-        return view('frontend.property.property_details',compact('property','multiImage','property_fac'));
+        return view('frontend.property.property_details',compact('property','multiImage','property_fac','distance' ));
 
 
 
