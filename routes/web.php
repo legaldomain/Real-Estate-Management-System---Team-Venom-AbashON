@@ -7,6 +7,7 @@ use App\Http\Controllers\AgentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\PropertyTypeController;
 use App\Http\Controllers\Backend\PropertyController;
+use App\Http\Controllers\Frontend\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -145,3 +146,11 @@ Route::middleware(['auth','role:admin'])->group(function(){
   //  });
    
   // }); //end agent middleware
+
+
+
+
+    //frontend property details all route
+
+
+  Route::get('/property/details/{id}/{slug}', [IndexController::class, 'PropertyDetails']);

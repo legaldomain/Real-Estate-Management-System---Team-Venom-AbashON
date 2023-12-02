@@ -36,10 +36,7 @@ $property = App\Models\Property::where('status','1')->where('featured','1')->lim
                                 </div>
                                 <div class="lower-content">
                                     <div class="author-info clearfix">
-                                        <div class="author pull-left">
-                                            <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/feature/author-1.jpg') }}" alt=""></figure>
-                                            <h6>Michael Bean</h6>
-                                        </div>
+                                        
                                         <div class="buy-btn pull-right"><a href="property-details.html">For {{$item ->property_status}}</a></div>
                                     </div>
                                     <div class="title-text"><h4><a href="property-details.html">{{$item ->property_name}}</a></h4></div>
@@ -59,7 +56,7 @@ $property = App\Models\Property::where('status','1')->where('featured','1')->lim
                                         <li><i class="icon-15"></i>{{$item ->	bathrooms}}</li>
                                         <li><i class="icon-16"></i>{{$item ->	property_size}}</li>
                                     </ul>
-                                    <div class="btn-box"><a href="property-details.html" class="theme-btn btn-two">See Details</a></div>
+            <div class="btn-box"><a href="{{ url('property/details/'.$item->id.'/'.$item->property_slug) }}" class="theme-btn btn-two">See Details</a></div>
                                 </div>
                             </div>
                         </div>
