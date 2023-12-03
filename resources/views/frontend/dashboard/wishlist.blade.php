@@ -24,7 +24,7 @@
         <section class="property-page-section property-list">
             <div class="auto-container">
                 <div class="row clearfix">
-                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                    <div class="col-lg-6 col-md-12 col-sm-12 sidebar-side">
 
         @php
             $id = Auth::user()->id;
@@ -59,19 +59,20 @@
 </div>
 
                     </div>
-                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                    <div class="col-lg-8 col-md-10 col-sm-10 content-side">
                         <div class="property-content-side">
 
                             <div class="wrapper list">
                                 <div class="deals-list-content list-item">
 
                                 <br></br>
-                    <div id="wishlist">
+                                <!--get wishlist with id-->
+                                    <div id="wishlist">
 
-                    </div>           
+                                    </div>           
     
     
-               </div> 
+                               </div> 
 
                             </div>
 
