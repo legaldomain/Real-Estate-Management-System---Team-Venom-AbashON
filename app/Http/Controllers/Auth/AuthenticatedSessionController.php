@@ -28,19 +28,8 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
-        // redirect to specific dashboard, each dashboard is protected 
-        $url = '';
-        if ($request->user()->role === 'admin'){
 
-            $url='/admin/dashboard';
-        } elseif ($request->user()->role === 'agent') {
-            $url='/agent/dashboard';
-        } elseif ($request->user()->role === 'user'){
-            $url='/dashboard';
-
-        }
-
-        return redirect()->intended($url);
+        return redirect()->intended(RouteServiceProvider::HOME);
     }
 
     /**

@@ -8,46 +8,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
-use App\Models\User;
 
 class ProfileController extends Controller
 {
     /**
      * Display the user's profile form.
      */
-    public function index()
-    {
-        $role=Auth::user()->role;
-        if ($role=='admin')
-        {
-            return view('admin.admin');
-        }
-
-        if ($role=='agent')
-        {
-            return view('agent.agent');
-        }
-
-        if ($role=='user')
-        {
-            return view('dashboard');
-        }
-    }
-
-    public function addagent(Request $request)
-    {
-        $data= new user;
-        $data->name= $request->name;
-        $data->email= $request->email;
-        $data->password= bcrypt($request->password);
-        $data->role='agent';
-
-        $data->save();
-
-        return redirect()->back();
-    }
-
-
     public function edit(Request $request): View
     {
         return view('profile.edit', [
@@ -91,12 +57,4 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
-
-    public function showAddAgentForm()
-    {
-        return view('admin.add_agent_form'); 
-    }
-
-
-
 }
