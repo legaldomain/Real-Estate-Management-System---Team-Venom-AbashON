@@ -37,9 +37,9 @@
         <!-- chooseus-section end -->
 
 
-        <!-- place-section -->
+        <!-- place-section
         @include('frontend.home.place')
-        <!-- place-section end -->
+        place-section end -->
 
 
         <!-- team-section -->

@@ -1,7 +1,7 @@
 <section class="deals-section sec-pad">
             <div class="auto-container">
                 <div class="sec-title">
-                    <h5>Hot Property</h5>
+                    <h5>Exclusive Property</h5>
                     <h2>Our Best Deals</h2>
                 </div>
                  
@@ -13,7 +13,7 @@
                                 <div class="image-box">
                                     <figure class="image"><img src="{{ asset('frontend/assets/images/feature/feature-1.jpg') }}" alt=""></figure>
                                     <div class="batch"><i class="icon-11"></i></div>
-                                    <span class="category">Featured</span>
+                                    <span class="category">Exclusive</span>
                                 </div>
                                 <div class="lower-content">
                                     <div class="author-info clearfix">
@@ -55,7 +55,7 @@
                                 <div class="image-box">
                                     <figure class="image"><img src="{{ asset('frontend/assets/images/feature/feature-1.jpg') }}" alt=""></figure>
                                     <div class="batch"><i class="icon-11"></i></div>
-                                    <span class="category">Featured</span>
+                                    <span class="category">Exclusive</span>
                                 </div>
                                 <div class="lower-content">
                                     <div class="author-info clearfix">
@@ -95,7 +95,7 @@
                                 <div class="image-box">
                                     <figure class="image"><img src="{{ asset('frontend/assets/images/feature/feature-1.jpg') }}" alt=""></figure>
                                     <div class="batch"><i class="icon-11"></i></div>
-                                    <span class="category">Featured</span>
+                                    <span class="category">Exclusive</span>
                                 </div>
                                 <div class="lower-content">
                                     <div class="author-info clearfix">

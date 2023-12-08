@@ -10,9 +10,9 @@ $property = App\Models\Property::where('status','1')->where('featured','1')->lim
 <section class="feature-section sec-pad bg-color-1">
             <div class="auto-container">
                 <div class="sec-title centred">
-                    <h5>Features</h5>
+                    <h5>Featured</h5>
                     <h2>Featured Property</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmod tempor incididunt <br />labore dolore magna aliqua enim.</p>
+                    
                 </div>
                 <div class="row clearfix">
 

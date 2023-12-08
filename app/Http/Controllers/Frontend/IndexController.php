@@ -36,6 +36,25 @@ class IndexController extends Controller
 
 
     } //end method
+
+    //public function HomePropertyBuyRentList(){
+       // $rentproperty = Property::where('property_status','rent')->get();
+       // $buyproperty = Property::where('property_status','buy')->get();
+
+
+      //  return view('frontend.property.property_list',compact('rentproperty','buyproperty'));
+
+    //}// End Method
+
+    public function RentProperty(){
+        $property = Property::where('status','1')->where('property_status','rent')->get();
+        return view('frontend.property.rent_property',compact('property'));
+    }// End Method 
+
+    public function BuyProperty(){
+        $property = Property::where('status','1')->where('property_status','buy')->get();
+        return view('frontend.property.buy_property',compact('property'));
+    }// End Method 
     
     
     public function BuyPropertySeach(Request $request){

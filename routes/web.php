@@ -191,3 +191,9 @@ Route::middleware(['auth','role:agent'])->group(function(){
 
   // Home Page Buy Seach Option
   Route::post('/buy/property/search', [IndexController::class, 'BuyPropertySeach'])->name('buy.property.search');
+
+  // Get All Rent Property 
+  Route::get('/rent/property', [IndexController::class, 'RentProperty'])->name('rent.property');
+
+  // Get All Buy Property 
+  Route::get('/buy/property', [IndexController::class, 'BuyProperty'])->name('buy.property');
