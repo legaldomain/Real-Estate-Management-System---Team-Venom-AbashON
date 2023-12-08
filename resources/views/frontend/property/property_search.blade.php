@@ -5,15 +5,15 @@
  <!--Page Title-->
         <section class="page-title-two bg-color-1 centred">
             <div class="pattern-layer">
-            <div class="pattern-1" style="background-image: url({{ asset('frontend/assets/images/shape/shape-9.png') }});"></div>
-            <div class="pattern-2" style="background-image: url({{ asset('frontend/assets/images/shape/shape-10.png') }});"></div>
+            <div class="pattern-1" ></div>
+            <div class="pattern-2" ></div>
             </div>
             <div class="auto-container">
                 <div class="content-box clearfix">
                     <h1>  Property Search </h1>
                     <ul class="bread-crumb clearfix">
                         <li><a href="index.html">Home</a></li>
-                        <li>Property Search</li>
+                        <li>Searched Property</li>
                     </ul>
                 </div>
             </div>
@@ -49,24 +49,8 @@
                                            <option value="4">Maxico</option>
                                         </select>
                                     </div>
-                                    <div class="select-box">
-                                        <select class="wide">
-                                           <option data-display="This Area Only">This Area Only</option>
-                                           <option value="1">New York</option>
-                                           <option value="2">California</option>
-                                           <option value="3">London</option>
-                                           <option value="4">Maxico</option>
-                                        </select>
-                                    </div>
-                                    <div class="select-box">
-                                        <select class="wide">
-                                           <option data-display="All Type">Max Rooms</option>
-                                           <option value="1">2+ Rooms</option>
-                                           <option value="2">3+ Rooms</option>
-                                           <option value="3">4+ Rooms</option>
-                                           <option value="4">5+ Rooms</option>
-                                        </select>
-                                    </div>
+                                    
+                                    
                                     <div class="select-box">
                                         <select class="wide">
                                            <option data-display="Most Popular">Most Popular</option>
@@ -75,14 +59,7 @@
                                            <option value="3">Residential</option>
                                         </select>
                                     </div>
-                                    <div class="select-box">
-                                        <select class="wide">
-                                           <option data-display="All Type">Select Floor</option>
-                                           <option value="1">2x Floor</option>
-                                           <option value="2">3x Floor</option>
-                                           <option value="3">4x Floor</option>
-                                        </select>
-                                    </div>
+                                    
                                     <div class="filter-btn">
                                         <button type="submit" class="theme-btn btn-one"><i class="fas fa-filter"></i>&nbsp;Filter</button>
                                     </div>
@@ -106,8 +83,8 @@
                                     <h5>Status Of Property</h5>
                                 </div>
                                 <ul class="category-list clearfix">
-    <li><a href="">For Rent <span>(200)</span></a></li>
-   <li><a href="">For Buy <span>(700)</span></a></li>
+                                     <li><a href="">For Rent</a></li>
+                                     <li><a href="">For Buy</a></li>
                                 </ul>
                             </div>
 
@@ -133,7 +110,7 @@
             <div class="deals-block-one">
                 <div class="inner-box">
                     <div class="image-box">
-                        <figure class="image"><img src="{{ asset($item->property_thambnail  ) }}" alt=""  style="width:300px; height:350px;"></figure>
+                        <figure class="image"><img src="{{ asset($item->property_thumbnail  ) }}" alt=""  style="width:300px; height:350px;"></figure>
                         <div class="batch"><i class="icon-11"></i></div>
                        @if($item->featured == 1)
                         <span class="category">Featured</span>
@@ -155,7 +132,7 @@
   @if($item->agent_id == Null)
 <div class="author-box pull-right">
         <figure class="author-thumb"> 
-            <img src="{{ url('upload/ariyan.jpg') }}" alt="">
+            
             <span>Admin</span>
         </figure>
     </div>
