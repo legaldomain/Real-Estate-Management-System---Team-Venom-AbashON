@@ -37,14 +37,47 @@ class IndexController extends Controller
 
     } //end method
 
-    //public function HomePropertyBuyRentList(){
-       // $rentproperty = Property::where('property_status','rent')->get();
-       // $buyproperty = Property::where('property_status','buy')->get();
+    public function PropertyMessage(Request $request){
+
+        $pid = $request->property_id;
+        $aid = $request->agent_id;
+
+        if (Auth::check()) {
+
+        PropertyMessage::insert([
+
+            'user_id' => Auth::user()->id,
+            'agent_id' => $aid,
+            'property_id' => $pid,
+            'msg_name' => $request->msg_name,
+            'msg_email' => $request->msg_email,
+            'msg_phone' => $request->msg_phone,
+            'message' => $request->message,
+            'created_at' => Carbon::now(), 
+
+        ]);
+
+        $notification = array(
+            'message' => 'Send Message Successful',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
 
 
-      //  return view('frontend.property.property_list',compact('rentproperty','buyproperty'));
 
-    //}// End Method
+        }
+        else{
+
+            $notification = array(
+            'message' => 'Please Log In to Your Account',
+            'alert-type' => 'error'
+        );
+
+        return redirect()->back()->with($notification);
+        }
+
+    }// End Method
 
     public function RentProperty(){
         $property = Property::where('status','1')->where('property_status','rent')->get();

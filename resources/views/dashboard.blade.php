@@ -2,7 +2,7 @@
 @section('main')
 
 <!--Page Title-->
-<section class="page-title centred" style="background-image: url(assets/images/background/page-title-5.jpg);">
+<section class="page-title centred" >
             <div class="auto-container">
                 <div class="content-box clearfix">
                     <h1>User Profile </h1>
@@ -27,17 +27,7 @@
                 $id = Auth::user()->id;
                 $userData = App\Models\User::find($id);
 
-
-
-
             @endphp
-                    
-
-
-
-
-
-
 
 
         <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
@@ -74,17 +64,15 @@
                                 <div class="inner-box">
                                     
                                     <div class="lower-content">
-                                        <h3>Including Animation In Your Design System.</h3>
+                                        <h3>Welcome to Your Dashboard</h3>
                                         <ul class="post-info clearfix">
                                             <li class="author-box">
                                                 <figure class="author-thumb"><img src="assets/images/news/author-1.jpg" alt=""></figure>
-                                                <h5><a href="blog-details.html">Eva Green</a></h5>
+                                                <h5><a href="blog-details.html">{{ $userData-> name}}</a></h5>
                                             </li>
-                                            <li>April 10, 2020</li>
                                         </ul>
                                       
           
-
 
 <div class="row">
 <div class="col-lg-4">
@@ -121,30 +109,19 @@
                             
                         </div>
 
-
     <div class="blog-details-content">
                             <div class="news-block-one">
                                 <div class="inner-box">
                                     
                                     <div class="lower-content">
                                         <h3>Activity Logs</h3>
-                                      <hr>
                                       
-          
-
-
- 
-
                                     </div>
                                 </div>
                             </div>
                              
                             
                         </div>
-
-
-
-
 
 
                     </div> 

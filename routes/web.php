@@ -173,7 +173,10 @@ Route::middleware(['auth','role:agent'])->group(function(){
        Route::get('/agent/add/property', 'AgentAddProperty')->name('agent.add.property'); 
        Route::post('/agent/store/property', 'AgentStoreProperty')->name('agent.store.property');
        Route::get('/agent/edit/property/{id}', 'AgentEditProperty')->name('agent.edit.property'); 
-       Route::post('/agent/update/property', 'AgentUpdateProperty')->name('agent.update.property'); 
+       Route::post('/agent/update/property', 'AgentUpdateProperty')->name('agent.update.property');
+
+       Route::get('/agent/property/message/', 'AgentPropertyMessage')->name('agent.property.message');  
+       Route::get('/agent/message/details/{id}', 'AgentMessageDetails')->name('agent.message.details'); 
 
  });
    
@@ -200,3 +203,6 @@ Route::middleware(['auth','role:agent'])->group(function(){
 
   // Get All Buy Property 
   Route::get('/buy/property', [IndexController::class, 'BuyProperty'])->name('buy.property');
+
+   // Send Message from Property Details Page 
+   Route::post('/property/message', [IndexController::class, 'PropertyMessage'])->name('property.message');
