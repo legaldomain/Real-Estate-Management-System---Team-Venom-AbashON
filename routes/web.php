@@ -11,6 +11,7 @@ use App\Http\Controllers\Agent\AgentPropertyController;
 use App\Http\Controllers\Backend\StateController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\WishlistController;
+use App\Http\Controllers\Frontend\CompareController;
 
 /*
 |--------------------------------------------------------------------------
@@ -200,3 +201,11 @@ Route::middleware(['auth','role:agent'])->group(function(){
 
   // Get All Buy Property 
   Route::get('/buy/property', [IndexController::class, 'BuyProperty'])->name('buy.property');
+
+
+ // compare add route 
+ Route::post('/add-to-compare/{property_id}', [CompareController::class, 'AddToCompare']); 
+
+
+
+  
