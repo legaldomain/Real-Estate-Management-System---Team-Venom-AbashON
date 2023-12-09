@@ -4,18 +4,14 @@
                 <div class="top-inner clearfix">
                     <div class="left-column pull-left">
                         <ul class="info clearfix">
-                            <li><i class="far fa-map-marker-alt"></i>Discover St, Dhaka, Bangladesh</li>
-                            <li><i class="far fa-clock"></i>Mon - Sat  9.00 - 18.00</li>
-                            <li><i class="far fa-phone"></i><a href="tel:0100002023"></a>01000002023</li>
+                            <li><i class="far fa-map-marker-alt"></i>Based On Bangladesh </li>
                         </ul>
                     </div>
                     <div class="right-column pull-right">
                         <ul class="social-links clearfix">
-                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="index.html"><i class="fab fa-pinterest-p"></i></a></li>
-                            <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
-                            <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
+                            <li><a href="https://www.facebook.com/sadaf.priyo/"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.facebook.com/israt.ayshi.5"><i class="fab fa-facebook-f"></i></a></li>
+                            
                         </ul>
         @auth
          <div class="sign-box">
@@ -63,18 +59,11 @@
                     </ul>
                 </li>
 
-                <li class="dropdown"><a href="index.html"><span>Blog</span></a>
-                    <ul>
-                        <li><a href="blog-1.html">Blog 01</a></li>
-                        <li><a href="blog-2.html">Blog 02</a></li>
-                        <li><a href="blog-3.html">Blog 03</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
-                    </ul>
-                </li>  
+                 
 
                 <li ><a href="{{route('home')}}"><span>About Us</span></a></li>
 
-                <li><a href="contact.html"><span>Contact</span></a></li>   
+                
             </ul>
         </div>
     </nav>
