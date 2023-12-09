@@ -83,7 +83,7 @@
                                     <h4>Property Description</h4>
                                 </div>
                                 <div class="text">
-                                    <p>{{ $property->long_descp }}</p>
+                                    <p>{{ strip_tags($property->long_descp) }}</p>
                                     
                                 </div>
                             </div>
@@ -179,14 +179,7 @@
                                    
                                 </div>
                             </div>
-                            <div class="statistics-box content-widget">
-                                <div class="title-box">
-                                    <h4>Page Statistics</h4>
-                                </div>
-                                <figure class="image-box">
-                                    <a href="assets/images/resource/statistics-1.png" class="lightbox-image" data-fancybox="gallery"><img src="assets/images/resource/statistics-1.png" alt=""></a>
-                                </figure>
-                            </div>
+                            
                             <div class="schedule-box content-widget">
                                 <div class="title-box">
                                     <h4>Schedule A Tour</h4>
@@ -345,42 +338,7 @@
 
 
 </div>
-                            <div class="calculator-widget sidebar-widget">
-                                <div class="calculate-inner">
-                                    <div class="widget-title">
-                                        <h4>Mortgage Calculator</h4>
-                                    </div>
-                                    <form method="post" action="mortgage-calculator.html" class="default-form">
-                                        <div class="form-group">
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <input type="number" name="total_amount" placeholder="Total Amount">
-                                        </div>
-                                        <div class="form-group">
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <input type="number" name="down_payment" placeholder="Down Payment">
-                                        </div>
-                                        <div class="form-group">
-                                            <i class="fas fa-percent"></i>
-                                            <input type="number" name="interest_rate" placeholder="Interest Rate">
-                                        </div>
-                                        <div class="form-group">
-                                            <i class="far fa-calendar-alt"></i>
-                                            <input type="number" name="loan" placeholder="Loan Terms(Years)">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="select-box">
-                                                <select class="wide">
-                                                   <option data-display="Monthly">Monthly</option>
-                                                   <option value="1">Yearly</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group message-btn">
-                                            <button type="submit" class="theme-btn btn-one">Calculate Now</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
