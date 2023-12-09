@@ -55,7 +55,7 @@
                                             </div>
                                         </form>
                                         <div class="othre-text">
-                                            <p>Have not any account? <a href="signup.html">Register Now</a></p>
+                                            <p>forgot password? <a href="{{route('password.request')}}">Click here</a></p>
                                         </div>
                                     </div>
                                 </div>
