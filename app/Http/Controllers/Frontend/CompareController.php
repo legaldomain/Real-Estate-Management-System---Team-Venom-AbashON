@@ -47,5 +47,15 @@ class CompareController extends Controller
 
 
     }//end method
+
+    public function GetCompareProperty(){
+
+        $compare = Compare::with('property')->where('user_id',Auth::id())->latest()->get();
+
+        
+
+        return response()->json($compare);
+ 
+    }// End Method
     
 }
