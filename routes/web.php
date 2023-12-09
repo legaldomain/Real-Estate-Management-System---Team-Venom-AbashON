@@ -58,6 +58,16 @@ Route::middleware('auth')->group(function () {
 
 
 });
+
+// User CompareController Route 
+Route::controller(CompareController::class)->group(function(){
+
+    Route::get('/user/compare', 'UserCompare')->name('user.compare'); 
+    
+
+
+});
+
 });
 
 require __DIR__.'/auth.php';
