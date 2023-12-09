@@ -88,6 +88,11 @@ class IndexController extends Controller
         $property = Property::where('status','1')->where('property_status','buy')->get();
         return view('frontend.property.buy_property',compact('property'));
     }// End Method 
+
+    public function FeaturedProperty(){
+        $property = Property::where('status','1')->where('featured','1')->get();
+        return view('frontend.property.featured_property',compact('property'));
+    }// End Method
     
     
     public function BuyPropertySeach(Request $request){

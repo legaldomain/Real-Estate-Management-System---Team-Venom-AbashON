@@ -204,5 +204,8 @@ Route::middleware(['auth','role:agent'])->group(function(){
   // Get All Buy Property 
   Route::get('/buy/property', [IndexController::class, 'BuyProperty'])->name('buy.property');
 
+  // Get All Buy Property 
+  Route::get('/featured/property', [IndexController::class, 'FeaturedProperty'])->name('featured.property');
+
    // Send Message from Property Details Page 
    Route::post('/property/message', [IndexController::class, 'PropertyMessage'])->name('property.message');
