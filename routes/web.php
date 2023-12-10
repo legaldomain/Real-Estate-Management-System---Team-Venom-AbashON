@@ -7,6 +7,7 @@ use App\Http\Controllers\AgentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\PropertyTypeController;
 use App\Http\Controllers\Backend\PropertyController;
+use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Agent\AgentPropertyController;
 use App\Http\Controllers\Backend\StateController;
 use App\Http\Controllers\Frontend\IndexController;
@@ -161,7 +162,20 @@ Route::middleware(['auth','role:admin'])->group(function(){
 });
 
    
-   }); //end grp admin middleware
+
+
+    //Blog Category All Route
+    Route::controller(BlogController::class)->group(function(){
+
+        Route::get('/all/blog/category','AllBlogCategory')->name('all.blog.category');
+        Route::post('/store/blog','StoreBlogCategory')->name('store.blog.category');
+        Route::get('/blog/category/{id}', 'EditBlogCategory');
+        Route::post('/update/blog/category','UpdateBlogCategory')->name('update.blog.category');
+        Route::get('/delete/blog/category/{id}','DeleteBlogCategory')->name('delete.blog.category');
+        
+
+});
+    }); //end grp admin middleware
 
 
 //agent  group middleware start
