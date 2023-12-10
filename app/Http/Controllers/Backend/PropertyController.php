@@ -152,20 +152,15 @@ class PropertyController extends Controller
 
         return view('backend.property.edit_property',compact('property','propertytype','facilities','activeAgent','property_facility','pstate'));
 
-         
-
 
     }// End Method 
-
 
 
     public function UpdateProperty(Request $request){
 
 
         $facil = $request->facility_id;
-        $facility = implode(",", $facil);
-
-        
+        $facility = implode(",", $facil);   
 
         $property_id =$request->id;
         Property::findOrFail($property_id)->update([
