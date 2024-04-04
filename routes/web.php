@@ -178,6 +178,11 @@ Route::middleware(['auth','role:agent'])->group(function(){
        Route::get('/agent/property/message/', 'AgentPropertyMessage')->name('agent.property.message');  
        Route::get('/agent/message/details/{id}', 'AgentMessageDetails')->name('agent.message.details'); 
 
+       // Schedule Request Route 
+       Route::get('/agent/schedule/request/', 'AgentScheduleRequest')->name('agent.schedule.request'); 
+       Route::get('/agent/details/schedule/{id}', 'AgentDetailsSchedule')->name('agent.details.schedule');
+       Route::post('/agent/update/schedule/', 'AgentUpdateSchedule')->name('agent.update.schedule');
+
  });
    
    }); //end agent middleware
@@ -208,4 +213,11 @@ Route::middleware(['auth','role:agent'])->group(function(){
   Route::get('/featured/property', [IndexController::class, 'FeaturedProperty'])->name('featured.property');
 
    // Send Message from Property Details Page 
-   Route::post('/property/message', [IndexController::class, 'PropertyMessage'])->name('property.message');
+  Route::post('/property/message', [IndexController::class, 'PropertyMessage'])->name('property.message');
+
+
+   
+  // Schedule Message Request Route 
+  Route::post('/store/schedule', [IndexController::class, 'StoreSchedule'])->name('store.schedule');
+
+  

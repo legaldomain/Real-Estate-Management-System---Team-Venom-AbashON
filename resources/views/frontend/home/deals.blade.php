@@ -1,3 +1,6 @@
+
+
+
 <section class="deals-section sec-pad">
             <div class="auto-container">
                 <div class="sec-title">
@@ -19,11 +22,11 @@
                                     <div class="author-info clearfix">
                                         <div class="author pull-left">
                                             <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/feature/author-1.jpg') }}" alt=""></figure>
-                                            <h6>Michael Bean</h6>
+                                            <h6></h6>
                                         </div>
                                         <div class="buy-btn pull-right"><a href="property-details.html">For Buy</a></div>
                                     </div>
-                                    <div class="title-text"><h4><a href="property-details.html">Villa on Grand Avenue</a></h4></div>
+                                    <div class="title-text"><h4><a href="property-details.html">Villa 1</a></h4></div>
                                     <div class="price-box clearfix">
                                         <div class="price-info pull-left">
                                             <h6>Start From</h6>
@@ -61,11 +64,11 @@
                                     <div class="author-info clearfix">
                                         <div class="author pull-left">
                                             <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/feature/author-1.jpg') }}" alt=""></figure>
-                                            <h6>Michael Bean</h6>
+                                            <h6></h6>
                                         </div>
                                         <div class="buy-btn pull-right"><a href="property-details.html">For Buy</a></div>
                                     </div>
-                                    <div class="title-text"><h4><a href="property-details.html">Villa on Grand Avenue</a></h4></div>
+                                    <div class="title-text"><h4><a href="property-details.html">Grand Avenue 5</a></h4></div>
                                     <div class="price-box clearfix">
                                         <div class="price-info pull-left">
                                             <h6>Start From</h6>
@@ -101,11 +104,11 @@
                                     <div class="author-info clearfix">
                                         <div class="author pull-left">
                                             <figure class="author-thumb"><img src="{{ asset('frontend/assets/images/feature/author-1.jpg') }}" alt=""></figure>
-                                            <h6>Michael Bean</h6>
+                                            <h6></h6>
                                         </div>
                                         <div class="buy-btn pull-right"><a href="property-details.html">For Buy</a></div>
                                     </div>
-                                    <div class="title-text"><h4><a href="property-details.html">Villa on Grand Avenue</a></h4></div>
+                                    <div class="title-text"><h4><a href="property-details.html">Apartment 22</a></h4></div>
                                     <div class="price-box clearfix">
                                         <div class="price-info pull-left">
                                             <h6>Start From</h6>

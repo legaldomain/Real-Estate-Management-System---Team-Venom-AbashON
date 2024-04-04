@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\PropertyMessage;  
 use Carbon\Carbon;
 use App\Models\State;
+use App\Models\Schedule;
 
 class IndexController extends Controller
 {
@@ -134,6 +135,45 @@ class IndexController extends Controller
         return view('frontend.property.property_search',compact('property'));
 
     }// End Method
+
+
+    public function StoreSchedule(Request $request){
+        $aid = $request->agent_id;
+        $pid = $request->property_id;
+
+        if (Auth::check()) {
+
+            Schedule::insert([
+
+                'user_id' => Auth::user()->id,
+                'property_id' => $pid,
+                'agent_id' => $aid,
+                'tour_date' => $request->tour_date,
+                'tour_time' => $request->tour_time,
+                'message' => $request->message,
+                'created_at' => Carbon::now(), 
+            ]);
+
+             $notification = array(
+            'message' => 'Request Successfully Sent',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+
+        }else{
+
+           $notification = array(
+            'message' => 'Please Login First',
+            'alert-type' => 'error'
+        );
+
+        return redirect()->back()->with($notification);
+
+        }
+
+    }// End Method 
 
 }
 

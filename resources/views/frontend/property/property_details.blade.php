@@ -181,38 +181,35 @@
                             </div>
                             
                             <div class="schedule-box content-widget">
-                                <div class="title-box">
-                                    <h4>Schedule A Tour</h4>
-                                </div>
-                                <div class="form-inner">
-                                    <form action="property-details.html" method="post">
-                                        <div class="row clearfix">
-                                            <div class="col-lg-6 col-md-12 col-sm-12 column">
-                                                <div class="form-group">
-                                                    <i class="far fa-calendar-alt"></i>
-                                                    <input type="text" name="date" placeholder="Tour Date" id="datepicker">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-12 col-sm-12 column">
-                                                <div class="form-group">
-                                                    <i class="far fa-clock"></i>
-                                                    <input type="text" name="time" placeholder="Any Time">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-12 col-sm-12 column">
-                                                <div class="form-group">
-                                                    <input type="text" name="name" placeholder="Your Name" required="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-12 col-sm-12 column">
-                                                <div class="form-group">
-                                                    <input type="email" name="email" placeholder="Your Email" required="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-12 col-sm-12 column">
-                                                <div class="form-group">
-                                                    <input type="tel" name="phone" placeholder="Your Phone" required="">
-                                                </div>
+                        <div class="title-box">
+                            <h4>Schedule A Tour</h4>
+                        </div>
+                        <div class="form-inner">
+                            <form action="{{ route('store.schedule') }}" method="post">
+                                @csrf 
+
+
+                                <div class="row clearfix">
+
+                <input type="hidden" name="property_id" value="{{ $property->id }}">  
+
+                @if($property->agent_id == Null)
+                <input type="hidden" name="agent_id" value="">
+                @else
+                <input type="hidden" name="agent_id" value="{{ $property->agent_id }}">
+                @endif       
+
+                                    <div class="col-lg-6 col-md-12 col-sm-12 column">
+                                        <div class="form-group">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <input type="text" name="tour_date" placeholder="Tour Date" id="datepicker">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 column">
+                                        <div class="form-group">
+                                            <i class="far fa-clock"></i>
+                                            <input type="text" name="tour_time" placeholder="Any Time">
+                        </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 column">
                                                 <div class="form-group">
@@ -359,11 +356,11 @@
                                         <div class="author-info clearfix">
                                             <div class="author pull-left">
                                                 <figure class="author-thumb"><img src="assets/images/feature/author-1.jpg" alt=""></figure>
-                                                <h6>Michael Bean</h6>
+                                                <h6></h6>
                                             </div>
                                             <div class="buy-btn pull-right"><a href="property-details.html">For Buy</a></div>
                                         </div>
-                                        <div class="title-text"><h4><a href="property-details.html">Villa on Grand Avenue</a></h4></div>
+                                        <div class="title-text"><h4><a href="property-details.html">Grand Avenue 5</a></h4></div>
                                         <div class="price-box clearfix">
                                             <div class="price-info pull-left">
                                                 <h6>Start From</h6>
@@ -374,7 +371,7 @@
                                                 <li><a href="property-details.html"><i class="icon-13"></i></a></li>
                                             </ul>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>
+                                        <p></p>
                                         <ul class="more-details clearfix">
                                             <li><i class="icon-14"></i>3 Beds</li>
                                             <li><i class="icon-15"></i>2 Baths</li>
@@ -397,11 +394,11 @@
                                         <div class="author-info clearfix">
                                             <div class="author pull-left">
                                                 <figure class="author-thumb"><img src="assets/images/feature/author-2.jpg" alt=""></figure>
-                                                <h6>Robert Niro</h6>
+                                                <h6></h6>
                                             </div>
                                             <div class="buy-btn pull-right"><a href="property-details.html">For Rent</a></div>
                                         </div>
-                                        <div class="title-text"><h4><a href="property-details.html">Contemporary Apartment</a></h4></div>
+                                        <div class="title-text"><h4><a href="property-details.html">C Apartment</a></h4></div>
                                         <div class="price-box clearfix">
                                             <div class="price-info pull-left">
                                                 <h6>Start From</h6>
@@ -435,7 +432,7 @@
                                         <div class="author-info clearfix">
                                             <div class="author pull-left">
                                                 <figure class="author-thumb"><img src="assets/images/feature/author-3.jpg" alt=""></figure>
-                                                <h6>Keira Mel</h6>
+                                                <h6></h6>
                                             </div>
                                             <div class="buy-btn pull-right"><a href="property-details.html">Sold Out</a></div>
                                         </div>
@@ -450,7 +447,7 @@
                                                 <li><a href="property-details.html"><i class="icon-13"></i></a></li>
                                             </ul>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>
+                                        <p></p>
                                         <ul class="more-details clearfix">
                                             <li><i class="icon-14"></i>3 Beds</li>
                                             <li><i class="icon-15"></i>2 Baths</li>
