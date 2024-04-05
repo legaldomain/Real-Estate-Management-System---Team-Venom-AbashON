@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\BlogCategory;
+use App\Models\BlogPost;
+use App\Models\User;
+use Intervention\Image\Facades\Image;
 use Carbon\Carbon;
 
 class BlogController extends Controller
@@ -88,5 +91,21 @@ class BlogController extends Controller
 
 
 
+    } //End method
+
+
+
+    public function AllPost(){
+
+        $post = BlogPost::latest()->get();
+        return view('backend.post.all_post',compact('post'));
+
+    } //End method
+
+    
+    public function AddPost(){
+
+        $blogcat = BlogCategory::latest()->get();
+        return view('backend.post.add_post',compact('blogcat'));
     } //End method
 }

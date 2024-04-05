@@ -245,3 +245,16 @@ Route::controller(BlogController::class)->group(function(){
     
 
 });
+
+
+// Blog category all post
+Route::controller(BlogController::class)->group(function(){
+    Route::get('/all/post','AllPost')->name('all.post'); 
+    
+    Route::get('/add/post','AddPost')->name('add.post');
+    Route::get('/blog/category/{id}','EditBlogCategory');
+    Route::post('/update/blog/category','UpdateBlogCategory')->name('update.blog.category');
+    Route::get('/delete/blog/category/{id}','DeleteBlogCategory')->name('delete.blog.category');
+    
+
+});
