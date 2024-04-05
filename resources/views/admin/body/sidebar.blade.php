@@ -105,13 +105,12 @@
           </li>
 
           <li class="nav-item">
-            <a href="pages/apps/calendar.html" class="nav-link">
+            <a href="https://www.timeanddate.com/calendar/" class="nav-link">
               <i class="link-icon" data-feather="calendar"></i>
               <span class="link-title">Calendar</span>
             </a>
           </li>
-          <li class="nav-item nav-category">Components</li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false" aria-controls="uiComponents">
               <i class="link-icon" data-feather="feather"></i>
               <span class="link-title">UI Kit</span>
@@ -124,7 +123,19 @@
                 </li>
                 <li class="nav-item">
                   <a href="pages/ui-components/alerts.html" class="nav-link">Alerts</a>
+                </li> -->
+                <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#blogcategory" role="button" aria-expanded="false" aria-controls="advancedUI">
+              <i class="link-icon" data-feather="anchor"></i>
+              <span class="link-title">Blog Catagory</span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse" id="blogcategory">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+                  <a href="{{ route('all.blog.category') }}" class="nav-link">All Blog Category</a>
                 </li>
+
                 
 
               </ul>
@@ -133,17 +144,25 @@
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#advancedUI" role="button" aria-expanded="false" aria-controls="advancedUI">
               <i class="link-icon" data-feather="anchor"></i>
-              <span class="link-title">Advanced UI</span>
+              <span class="link-title">Speedtest</span>
               <i class="link-arrow" data-feather="chevron-down"></i>
             </a>
             <div class="collapse" id="advancedUI">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="pages/advanced-ui/cropper.html" class="nav-link">Cropper</a>
+                  <a href="https://fast.com/" class="nav-link">Fast</a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/advanced-ui/owl-carousel.html" class="nav-link">Owl carousel</a>
+                  <a href="https://www.speedtest.net/" class="nav-link">Ookla</a>
                 </li>
+
+
+
+
+
+
+                
+                
                 
               
               </ul>
@@ -152,13 +171,8 @@
 
 
     
-          <li class="nav-item nav-category">Docs</li>
-          <li class="nav-item">
-            <a href="https://www.nobleui.com/html/documentation/docs.html" target="_blank" class="nav-link">
-              <i class="link-icon" data-feather="hash"></i>
-              <span class="link-title">Documentation</span>
-            </a>
-          </li>
+          
+          
         </ul>
       </div>
     </nav>

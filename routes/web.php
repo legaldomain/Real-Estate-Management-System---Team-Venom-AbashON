@@ -12,6 +12,10 @@ use App\Http\Controllers\Backend\StateController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\WishlistController;
 use App\Http\Controllers\Frontend\CompareController;
+use App\Http\Controllers\Backend\BlogController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -230,5 +234,14 @@ Route::middleware(['auth','role:agent'])->group(function(){
 })->middleware('guest')->name('password.request');
 
 
+// Blog category all route
+Route::controller(BlogController::class)->group(function(){
+    Route::get('/all/blog/category','AllBlogCategory')->name('all.blog.category');
+    Route::get('/add/type','AddType')->name('add.type');
+    Route::post('/store/type','StoreType')->name('store.type');
+    Route::get('/edit/type/{id}','EditType')->name('edit.type');
+    Route::post('/update/type','UpdateType')->name('update.type');
+    Route::get('/delete/type/{id}','DeleteType')->name('delete.type');
+    
 
-  
+});
